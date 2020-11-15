@@ -1,6 +1,9 @@
 # learning-npm
 npm/webpack/babel の学習用リポジトリです。  
 
+# Demo
+[デモ](https://fukugit.github.io/learning-npm)  
+
 ## このプロジェクトの構成  
 
 | ファイル                                         | 概要                     |
