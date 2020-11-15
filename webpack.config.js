@@ -4,11 +4,11 @@ module.exports = {
   mode: 'development',
   entry: './src/js/index.js',
   output: {
-      path: `${__dirname}/dist`,
+      path: `${__dirname}/docs`,
       filename: 'main.js'
   },
   devServer: {
-      contentBase: './dist'
+      contentBase: './docs'
   },
   module: {
     rules: [
