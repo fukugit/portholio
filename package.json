@@ -2,10 +2,11 @@
   "name": "learning-npm",
   "version": "1.0.0",
   "description": "npm/webpack/babel の学習用リポジトリです。 # learning-npm",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "build": "browserify main.js -o ./bundle.js"
+    "start": "webpack-dev-server --open",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,13 @@
   },
   "homepage": "https://github.com/fukugit/learning-npm#readme",
   "dependencies": {
-    "browserify": "^17.0.0",
     "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "^3.11.0"
   }
 }
