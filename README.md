@@ -1,8 +1,36 @@
 # learning-npm
-npm/webpack/babel の学習用リポジトリです。  
+npm/webpack の学習用リポジトリです。  
 
 # Demo
 [デモ](https://fukugit.github.io/learning-npm)  
+
+## 学んだこと
+
+### npmでモジュール管理
+npmでモジュール管理するのに、本番でも利用するモジュールと開発時でしか利用しないモジュールの使い分けは以下のようにしてインストールします。  
+こちらは本番でも利用するモジュールのインストール方法です。  
+以下を実行後に```package.json```の```dependencies```に追記されます。
+```
+npm install --save
+```
+以下を実行後に```package.json```の```devDependencies```に追記されます。
+```
+npm install --save-dev
+```
+  
+  
+### モジュールのコマンド(webpackとか)を実行する方法
+```
+npx webpack
+```
+
+### Webpackをとりあえず動かす方法
+### CSSを読み込む方法
+### CSSをアウトプットする方法
+### 画像をアウトプットする方法
+
+
+
 
 ## このプロジェクトの構成  
 
@@ -35,5 +63,5 @@ npm run build
 ```
 
 ## 参考にしたサイト
-[HTMLファイルをdist配下に出力する方法](https://ema-hiro.hatenablog.com/entry/2017/10/12/015748)
-
+[HTMLファイルをdist配下に出力する方法](https://ema-hiro.hatenablog.com/entry/2017/10/12/015748)  
+[画像をoutputする方法](https://note.com/koki_nagai/n/n5a637b6b727d)  

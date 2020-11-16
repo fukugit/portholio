@@ -1604,14 +1604,15 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 
 /***/ }),
 
-/***/ "./src/html/index.html":
-/*!*****************************!*\
-  !*** ./src/html/index.html ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./src/css/style.css":
+/*!***************************!*\
+  !*** ./src/css/style.css ***!
+  \***************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("// Module\nvar code = \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\\n  <meta charset=\\\"UTF-8\\\">\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\n  <title>Document</title>\\n</head>\\n<body>\\n \\n  <p>This is test!</p>\\n  <div id=\\\"time\\\"></div>\\n\\n</body>\\n</html>\";\n// Exports\nmodule.exports = code;\n\n//# sourceURL=webpack:///./src/html/index.html?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/css/style.css?");
 
 /***/ }),
 
@@ -1623,7 +1624,7 @@ eval("// Module\nvar code = \"<!DOCTYPE html>\\n<html lang=\\\"en\\\">\\n<head>\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _html_index_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../html/index.html */ \"./src/html/index.html\");\n/* harmony import */ var _html_index_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_html_index_html__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main */ \"./src/js/main.js\");\n/* \n  require\n */\n\n\n\n// time.textContent = getTime();\n// console.log(html);\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main */ \"./src/js/main.js\");\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/style.css */ \"./src/css/style.css\");\n/* \n  require\n */\n\n\n// let body = document.getElementsByTagName('body')[0];\n// body.classList.add('sky');\n\n// time.textContent = getTime();\n// console.log(html);\n\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
@@ -1635,7 +1636,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _htm
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./timer */ \"./src/js/timer.js\");\n\n\n{\n  time.textContent = Object(_timer__WEBPACK_IMPORTED_MODULE_0__[\"getTime\"])();\n  console.log(html);\n}\n\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./timer */ \"./src/js/timer.js\");\n\n\n{\n  time.textContent = Object(_timer__WEBPACK_IMPORTED_MODULE_0__[\"getTime\"])();\n}\n\n\n//# sourceURL=webpack:///./src/js/main.js?");
 
 /***/ }),
 
