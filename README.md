@@ -25,6 +25,60 @@ npx webpack
 ```
 
 ### Webpackをとりあえず動かす方法
+WebPackを使ってとりあえずビルドしたい時はこの２つをinstallすればOKです。  
+```
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "3.3.12",
+  }
+```
+
+```webpack.config.js``` にこちらを定義します。  
+内容はエントリポイントとなるJavaScriptファイルとビルド出力先の２つになります。  
+```
+module.exports = {
+  mode: 'development',
+  entry: './src/js/index.js',
+  output: {
+      path: `${__dirname}/docs`,
+      filename: 'main.js'
+  },
+}
+```
+
+```package.json``` にビルドを定義します。これで ```npm run build```を実行するとビルド出力先にJavaScriptが出力されます。  
+```
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  }
+```
+
+### WebPackのWebサーバを利用する方法
+WebpackでWebサーバを立ち上げて作成したHTMLを確認するには以下が必要です。
+```
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
+```
+
+```webpack.config.js``` にこちらを定義します。  
+Webサーバ起動時にどのファイルを参照するかの設定です。  
+```
+module.exports = {
+  devServer: {
+      contentBase: './docs'
+  },
+}
+```
+
+```package.json``` に開始コマンドを定義します。これで ```npm start```を実行するとWebサーバが立ち上がります。  
+src配下（ビルド前のファイル）を更新すると即時反映されますが、これはメモリ展開されたものを見ているだけなので、docに出力するにはビルドを行う必要があります。  
+```
+  "scripts": {
+    "start": "webpack-dev-server --open",
+  },
+```
+
 ### CSSを読み込む方法
 ### CSSをアウトプットする方法
 ### 画像をアウトプットする方法
