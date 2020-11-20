@@ -19,10 +19,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup Node.js 12.x
-        uses: actions/setup-node@v1.3.0
+      - name: Setup Node.js
+        uses: actions/setup-node@v1.4.4
         with:
-          node-version: 12.x
+          node-version: '14'
+          check-latest: tru
 
       - name: ci
         run: npm ci
