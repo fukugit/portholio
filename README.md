@@ -17,12 +17,13 @@ npm install --save
 ```
 npm install --save-dev
 ```
-  
-  
+
 ### モジュールのコマンド(webpackとか)を実行する方法
 ```
 npx webpack
 ```
+
+<br>
 
 ### Webpackをとりあえず動かす方法
 WebPackを使ってとりあえずビルドしたい時はこの２つをinstallすればOKです。  
