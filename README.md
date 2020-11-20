@@ -1,8 +1,12 @@
 # learning-npm
 npm/webpack の学習用リポジトリです。  
 
+<br>
+
 # Demo
 [デモ](https://fukugit.github.io/learning-npm)  
+
+<br>  
 
 ## 学んだこと
 
@@ -54,6 +58,8 @@ module.exports = {
   }
 ```
 
+<br>
+
 ### WebPackのWebサーバを利用する方法
 WebpackでWebサーバを立ち上げて作成したHTMLを確認するには以下が必要です。
 ```
@@ -80,6 +86,8 @@ src配下（ビルド前のファイル）を更新すると即時反映され�
   },
 ```
 
+<br>
+
 ### CSSを読み込む方法
 CSSを読み込んでJS内で使用するだけであれば、```webpack.config.js``` にこちらを定義します。  
 ただし、正直これだとHTMLからCSSが参照されないので、HTMLを使うのであればCSSも出力する必要があります。  
@@ -98,12 +106,19 @@ module.exports = {
       },,
 ```
 
+<br>
+
 ### CSSをアウトプットする方法
 ```mini-css-extract-plugin``` 
+
+<br>
+
 ### 画像をアウトプットする方法
 
 
 
+
+<br>
 
 ## このプロジェクトの構成  
 
@@ -116,6 +131,8 @@ module.exports = {
 | [src/js/main.js](./src/js/main.js)           | JSのメイン処理               |
 | [src/js/timer.js](./src/js/timer.js)         | メイン処理からimportされる関数・クラス |
 
+
+<br>
 
 ## ローカルでの実行方法
 ブラウザで動かす方法を説明します。
@@ -134,6 +151,8 @@ npm start
 ```
 npm run build
 ```
+
+<br>
 
 ## 参考にしたサイト
 [HTMLファイルをdist配下に出力する方法](https://ema-hiro.hatenablog.com/entry/2017/10/12/015748)  
