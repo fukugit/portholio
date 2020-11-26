@@ -103,19 +103,56 @@ module.exports = {
          'style-loader',
          'css-loader'
         ]
-      },,
+      },
+```
+
+上述の設定だけでは不足していて、
+エントリポイントの[/index.js](./src/js/index.js)で、以下の記述のようにCSSimportして初めてCSSを参照することが可能になります。  
+```
+import '../css/style.css';
 ```
 
 <br>
 
 ### CSSをアウトプットする方法
-```mini-css-extract-plugin``` 
+CSSをアウトプットするには、まずは```mini-css-extract-plugin```というプラグインが必要になります。  
+```
+  "devDependencies": {
+    "mini-css-extract-plugin": "^1.3.1",
+  }
+```
+
+上記をインストール後、```webpack.config.js```に以下のように設定します。  
+```
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use:[
+          MiniCssExtractPlugin.loader,
+          'css-loader'
+        ],
+      },
+    ]
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename:'./src/css/style.css'
+    })
+  ],
+};
+
+```
 
 <br>
 
 ### 画像をアウトプットする方法
 
+<br>
 
+### HTMLをアウトプットする方法
 
 
 <br>
