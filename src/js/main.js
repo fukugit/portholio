@@ -1,5 +1,6 @@
-import { StopWatch, getTime } from './timer';
+import {StopWatch} from './timer';
 
 {
-  time.textContent = getTime();
+  const stopwatch = new StopWatch();
+  time.textContent = stopwatch.getNow();
 }
