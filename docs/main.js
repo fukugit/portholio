@@ -1636,7 +1636,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mai
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./timer */ \"./src/js/timer.js\");\n\n\n{\n  time.textContent = Object(_timer__WEBPACK_IMPORTED_MODULE_0__[\"getTime\"])();\n}\n\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./timer */ \"./src/js/timer.js\");\n\n\n{\n  const stopwatch = new _timer__WEBPACK_IMPORTED_MODULE_0__[\"StopWatch\"]();\n  time.textContent = stopwatch.getNow();\n}\n\n\n//# sourceURL=webpack:///./src/js/main.js?");
 
 /***/ }),
 
@@ -1644,11 +1644,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _tim
 /*!*************************!*\
   !*** ./src/js/timer.js ***!
   \*************************/
-/*! exports provided: getTime, StopWatch */
+/*! exports provided: StopWatch */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getTime\", function() { return getTime; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"StopWatch\", function() { return StopWatch; });\nvar moment = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\");\n\nfunction getTime() {\n  const myDate = new Date();\n  const myCoolDate = moment(myDate).format('LT');\n  return myCoolDate;\n}\n\nclass StopWatch {\n  static getTriangle() {\n    return 100;\n  }\n}\n\n//# sourceURL=webpack:///./src/js/timer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"StopWatch\", function() { return StopWatch; });\nvar moment = __webpack_require__(/*! moment */ \"./node_modules/moment/moment.js\");\n\nclass StopWatch {\n  getNow() {\n    const myDate = new Date();\n    const myCoolDate = moment(myDate).format('LT');\n    return myCoolDate;\n  }\n}\n\n//# sourceURL=webpack:///./src/js/timer.js?");
 
 /***/ })
 
