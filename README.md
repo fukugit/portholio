@@ -11,16 +11,11 @@ npm/webpack の学習用リポジトリです。
 ## 学んだこと
 
 ### npmでモジュール管理
-npmでモジュール管理するのに、本番でも利用するモジュールと開発時でしか利用しないモジュールの使い分けは以下のようにしてインストールします。  
-こちらは本番でも利用するモジュールのインストール方法です。  
-以下を実行後に```package.json```の```dependencies```に追記されます。
-```sh
-npm install --save
-```
-以下を実行後に```package.json```の```devDependencies```に追記されます。
-```
-npm install --save-dev
-```
+npmでモジュール管理する時、本番でも利用するモジュールと、開発時でしか利用しないモジュールの使い分けは以下のようにしてインストールします。  
+| 環境              | コマンド                   |
+| --------------- | ---------------------- |
+| dependencies    | npm install --save     |
+| devDependencies | npm install --save-dev |
 
 ### モジュールのコマンド(webpackとか)を実行する方法
 ```sh
@@ -39,13 +34,12 @@ WebPackを使ってとりあえずビルドしたい時はこの２つをinstall
 ```
 
 ```webpack.config.js``` にこちらを定義します。  
-内容はエントリポイントとなるJavaScriptファイルとビルド出力先の２つになります。  
-```json
+```
 module.exports = {
   mode: 'development',
-  entry: './src/js/index.js',
+  entry: './src/js/index.js',     // ここがエントリポイントになります。
   output: {
-      path: `${__dirname}/docs`,
+      path: `${__dirname}/docs`,  // ビルドの出力先です。
       filename: 'main.js'
   },
 }
@@ -59,6 +53,7 @@ module.exports = {
 ```
 
 上記の例だと、HTMLに以下の記述をしておけば上記でビルドした```main.js```を呼び出すことができます。  
+HTMLへのjsの差し込みをwebpackは自動でやってくれません。  
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -82,11 +77,10 @@ WebpackでWebサーバを立ち上げて作成したHTMLを確認するには以
 ```
 
 ```webpack.config.js``` にこちらを定義します。  
-Webサーバ起動時にどのファイルを参照するかの設定です。  
-```json
+```
 module.exports = {
   devServer: {
-      contentBase: './docs'
+      contentBase: './docs'  // Webサーバ起動時にどのファイルを参照するかの設定です。
   },
 }
 ```
@@ -103,10 +97,10 @@ src配下（ビルド前のファイル）を更新すると即時反映され�
 
 ### CSSを読み込む方法
 CSSを読み込んでJS内で使用するだけであれば、```webpack.config.js``` にこちらを定義します。  
-ただし、正直これだとHTMLからCSSが参照されないので、HTMLを使うのであればCSSも出力する必要があります。  
+ただし、これだとHTMLからCSSが参照されないので、HTMLを使うのであればCSSをdocフォルダ配下に出力する必要があります。  
 しかしwebpackの標準機能ではCSSの出力機能がないのでそれについてはプラグインを使っていきます。  
 具体的な使い方はこの後に記述します「CSSをアウトプットする方法」を参照して下さい。
-```json
+```
 module.exports = {
   module: {
     rules: [
@@ -136,7 +130,7 @@ CSSをアウトプットするには、まずは```mini-css-extract-plugin```と
 ```
 
 上記をインストール後、```webpack.config.js```に以下のように設定します。  
-```json
+```
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   module: {
@@ -168,13 +162,13 @@ import '../css/style.css';
 
 ### 画像をアウトプットする方法
 画像のアウトプットは簡単です。  
-npmでまずは以下をインストールします。
+npmでまずは以下をインストールします。  
 ```
 "url-loader": "^4.1.1",
 ```
 
 その後、以下の設定を```webpack.config.js```に追加すればOKです。ビルド時に```docs```配下に画像が出力されます。  
-```json
+```
   module: {
     rules: [
       {
@@ -198,7 +192,7 @@ HTMLをアウトプットするには、プラグインが必要です。
 ```
 
 その後、以下の設定を```webpack.config.js```に追加すればOKです。ビルド時に```docs```配下にHTMLが出力されます。このHTMLにはJSやCSSのパスが自動で含まれます。  
-```json
+```
   module: {
     rules: [
       {
