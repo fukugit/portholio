@@ -24,10 +24,13 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
-        use:[
+        test: /\.s[ac]ss$/i,
+        use: [
           MiniCssExtractPlugin.loader,
-          'css-loader'
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
         ],
       },
       {
@@ -44,7 +47,7 @@ module.exports = {
       template: "./src/html/index.html"
     }),
     new MiniCssExtractPlugin({
-      filename:'./src/css/style.css'
+      filename:'css/style.css'
     })
   ],
 };
