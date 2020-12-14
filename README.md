@@ -213,6 +213,54 @@ HTMLをアウトプットするには、プラグインが必要です。
   ],
 ```
 
+<br>
+
+### Sassを使う方法
+[コチラ](http://vistylee.com/webpack-sass-css/) を参考にしました。
+```
+npm install sass-loader sass 
+```
+
+```webpack.config.js```に以下を追加します。
+```
+module: {
+  rules: 
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      },
+
+  plugins: [
+    new MiniCssExtractPlugin({
+      // ファイルの出力先
+      filename:'css/style.css'
+    })
+  ]
+```
+
+[/index.js](./src/js/index.js)で、以下の記述をします。  
+```
+import "../css/style.scss";
+```
+
+<br>
+
+### Sass でnpmモジュールのCSSを使う方法
+[style.scss](./src/css/style.scss)で、以下の記述をします。  
+```sass
+@import "~animate.css";
+```
+
+上記は、animate.css を使った令です。こちらのモジュールを使うには以下でインストールする必要があります。
+```
+npm install animate.css --save
+```
 
 <br>
 
