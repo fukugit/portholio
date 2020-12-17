@@ -4074,16 +4074,14 @@
 body {
   margin: 0;
 }
-
-.contanor {
+body .contanor {
   margin: 30px auto;
   max-width: 800px;
   min-width: 800px;
   display: flex;
   flex-direction: column;
 }
-
-.column {
+body .contanor .column {
   margin: 10px auto;
   padding: 30px;
   background: #dddcdc;
@@ -4092,13 +4090,7 @@ body {
   box-sizing: border-box;
   position: relative;
 }
-
-.time {
-  display: inline;
-  /* margin: 0 10px; */
-}
-
-img {
+body .contanor .column img {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -4110,8 +4102,11 @@ img {
   max-height: 100%;
   margin: auto;
 }
-
-.fukidashi1 {
+body .contanor .column .time {
+  display: inline;
+  /* margin: 0 10px; */
+}
+body .contanor .column .fukidashi1 {
   position: absolute;
   top: 50px;
   left: 50px;
@@ -4119,8 +4114,7 @@ img {
   height: 100px;
   font-size: 26px;
 }
-
-.fukidashi2 {
+body .contanor .column .fukidashi2 {
   position: absolute;
   top: 30px;
   right: 50px;
@@ -4128,8 +4122,7 @@ img {
   height: 100px;
   font-size: 26px;
 }
-
-.fukidashi3 {
+body .contanor .column .fukidashi3 {
   position: absolute;
   top: 50px;
   right: 80px;
@@ -4137,8 +4130,7 @@ img {
   height: 100px;
   font-size: 26px;
 }
-
-.fukidashi4 {
+body .contanor .column .fukidashi4 {
   position: absolute;
   top: 50px;
   right: 50px;
