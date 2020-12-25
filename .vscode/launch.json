@@ -4,21 +4,18 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
-    
     {
-      "type": "chrome",
-      "request": "launch",
-      "name": "Launch Chrome with webpack",
-      "url": "http://localhost:8080",
-      "preLaunchTask": "npm: start",
-    },
-    {
-      "type": "chrome",
-      "request": "launch",
-      "name": "webpack",
-      "url": "http://localhost:8081",
-      "webRoot": "${workspaceFolder}/",
-      "preLaunchTask": "npm: build",
+        "type": "chrome",
+        "request": "attach",
+        "trace": true,
+        "name": "Attach to WebPack Server on Chrome",
+        "port": 9222,
+        "url": "http://localhost:8080/",
+        "webRoot": "${workspaceRoot}/docs",
+        "sourceMapPathOverrides": {
+          "webpack:///./src/*": "${workspaceRoot}/src/*"
+        },
+        "sourceMaps": true
     }
   ]
 }
