@@ -3,15 +3,43 @@ npm/webpack の学習用リポジトリです。
 
 <br>
 
-# Demo
+## Demo
+GitHubActions でビルドしています。
 [デモ](https://fukugit.github.io/learning-npm)  
 
 <br>  
 
+## デバッグ方法
+ローカル環境でデバッグする方法です。  
+Webpackでビルドする前のJSファイルをVsCodeでデバッグする方法になります。  
+### WebPackのサーバ起動
+```
+npm start
+```
+<br>
+
+### ターミナルで実行
+すでにChromeを開いていたらうまく動作しません。必ず閉じてから実施してください。  
+```
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+```
+<br>
+
+### ブラウザでサイトにアクセス
+http://localhost:8080/
+
+### launch.jsonを起動
+```Attach to WebPack Server on Chrome``` を起動します。
+
+### JavaScriptファイルにブレークポイントを貼る
+[WebPackでビルド前のJSファイル](./src/js)にブレークポイントを貼って、画面を操作するとブレークポイントが動きます。  
+
+
+
 ## 学んだこと
 
 ### npmでモジュール管理
-npmでモジュール管理する時、本番でも利用するモジュールと、開発時でしか利用しないモジュールの使い分けは以下のようにしてインストールします。  
+本番用と開発用
 | 環境              | コマンド                   |
 | --------------- | ---------------------- |
 | dependencies    | npm install --save     |
@@ -33,7 +61,7 @@ WebPackを使ってとりあえずビルドしたい時はこの２つをinstall
   }
 ```
 
-```webpack.config.js``` にこちらを定義します。  
+[webpack.config.js](webpack.config.js)  
 ```
 module.exports = {
   mode: 'development',
@@ -45,11 +73,16 @@ module.exports = {
 }
 ```
 
-```package.json``` にビルドを定義します。これで ```npm run build```を実行するとビルド出力先にJavaScriptが出力されます。  
+[package.json](package.json) にビルドを定義します。  
 ```json
   "scripts": {
     "build": "webpack --config webpack.config.js"
   }
+```
+
+その後  
+```
+npm run build
 ```
 
 上記の例だと、HTMLに以下の記述をしておけば上記でビルドした```main.js```を呼び出すことができます。  
