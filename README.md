@@ -182,8 +182,7 @@ import '../css/style.css';
 
 <br>
 
-### 画像をアウトプットする方法
-npmでまずは以下をインストールします。  
+### 画像ファイルローダー
 ```
 "url-loader": "^4.1.1",
 ```
@@ -206,8 +205,8 @@ npmでまずは以下をインストールします。
 ```
 <br>
 
-### HTMLをアウトプットする方法
-HTMLをアウトプットするには、プラグインが必要です。  
+### HTMLローダー
+HTMLをアウトプットするには、以下のプラグインが必要です。  
 ```
 "html-loader": "^1.3.2",
 "html-webpack-plugin": "^4.5.0",
@@ -232,7 +231,7 @@ HTMLをアウトプットするには、プラグインが必要です。
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/html/index.html"
+      template: "./src/html/index.html"  //読み込み元ファイル
     }),
   ],
 ```
