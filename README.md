@@ -32,11 +32,11 @@ Chromeは必ず閉じてから実施してください。
 <br>
 
 ### ブラウザでサイトにアクセス
-http://localhost:8080/  
+[http://localhost:8080/](http://localhost:8080/)をブラウザのアドレスバーに指定します。  
 <br>
 
 ### launch.jsonを起動
-```Attach to WebPack Server on Chrome``` を起動します。
+```Attach to WebPack Server on Chrome``` を起動します。  
 <br>
 
 ### JavaScriptファイルにブレークポイントを貼る
