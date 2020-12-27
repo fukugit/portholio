@@ -5,7 +5,7 @@ npm/webpack の学習用リポジトリです。
 
 ## Demo
 GitHubActions でビルドしています。  
-[デモ](https://fukugit.github.io/learning-npm)  
+[デモ](https://fukugit.github.io/learning-webpack/)  
 
 <br>  
 
