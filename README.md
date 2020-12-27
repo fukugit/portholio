@@ -4,14 +4,20 @@ npm/webpack の学習用リポジトリです。
 <br>
 
 ## Demo
-GitHubActions でビルドしています。
+GitHubActions でビルドしています。  
 [デモ](https://fukugit.github.io/learning-npm)  
 
 <br>  
 
-## デバッグ方法
-ローカル環境でデバッグする方法です。  
-Webpackでビルドする前のJSファイルをVsCodeでデバッグする方法になります。  
+## ローカルで起動
+### WebPackのサーバ起動
+```
+npm start
+```
+<br>  
+
+## ローカルでデバッグ
+Webpackでビルドする前のJSファイルをVsCodeでデバッグする方法です。  
 ### WebPackのサーバ起動
 ```
 npm start
@@ -19,7 +25,7 @@ npm start
 <br>
 
 ### ターミナルで実行
-すでにChromeを開いていたらうまく動作しません。必ず閉じてから実施してください。  
+Chromeは必ず閉じてから実施してください。  
 ```
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
 ```
@@ -27,12 +33,15 @@ npm start
 
 ### ブラウザでサイトにアクセス
 http://localhost:8080/
+<br>
 
 ### launch.jsonを起動
 ```Attach to WebPack Server on Chrome``` を起動します。
+<br>
 
 ### JavaScriptファイルにブレークポイントを貼る
 [WebPackでビルド前のJSファイル](./src/js)にブレークポイントを貼って、画面を操作するとブレークポイントが動きます。  
+<br>
 
 
 
@@ -44,22 +53,22 @@ http://localhost:8080/
 | --------------- | ---------------------- |
 | dependencies    | npm install --save     |
 | devDependencies | npm install --save-dev |
+<br>
 
 ### モジュールのコマンド(webpackとか)を実行する方法
 ```sh
 npx webpack
 ```
-
 <br>
 
 ### Webpackをとりあえず動かす方法
-WebPackを使ってとりあえずビルドしたい時はこの２つをinstallすればOKです。  
 ```json
   "devDependencies": {
     "webpack": "^4.44.1",
     "webpack-cli": "3.3.12",
   }
 ```
+<br>
 
 [webpack.config.js](webpack.config.js)  
 ```
@@ -72,6 +81,7 @@ module.exports = {
   },
 }
 ```
+<br>
 
 [package.json](package.json) にビルドを定義します。  
 ```json
@@ -79,14 +89,16 @@ module.exports = {
     "build": "webpack --config webpack.config.js"
   }
 ```
+<br>
 
-その後  
+上記の設定後に以下を実行するとJSファイルがビルドされます。  
 ```
 npm run build
 ```
+<br>
 
-上記の例だと、HTMLに以下の記述をしておけば上記でビルドした```main.js```を呼び出すことができます。  
 HTMLへのjsの差し込みをwebpackは自動でやってくれません。  
+以下のようにHTMLを自分で用意して、ビルド後のJSファイルを読み込んで下さい。  
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -98,18 +110,17 @@ HTMLへのjsの差し込みをwebpackは自動でやってくれません。
 </body>
 </html>
 ```
-
 <br>
 
 ### WebPackのWebサーバを利用する方法
-WebpackでWebサーバを立ち上げて作成したHTMLを確認するには以下が必要です。
 ```json
   "devDependencies": {
     "webpack-dev-server": "^3.11.0"
   }
 ```
+<br>
 
-```webpack.config.js``` にこちらを定義します。  
+[webpack.config.js](webpack.config.js) にこちらを定義します。  
 ```
 module.exports = {
   devServer: {
@@ -117,54 +128,31 @@ module.exports = {
   },
 }
 ```
+<br>
 
-```package.json``` に開始コマンドを定義します。これで ```npm start```を実行するとWebサーバが立ち上がります。  
-src配下（ビルド前のファイル）を更新すると即時反映されますが、これはメモリ展開されたものを見ているだけなので、docに出力するにはビルドを行う必要があります。  
+```package.json``` に以下を定義します。  
+これで ```npm start```を実行するとWebサーバが立ち上がります。  
+備考としてですが、src配下（ビルド前のファイル）を更新すると即時反映されますが、これはメモリ展開されたものを見ているだけなので、docに出力するにはビルドを行う必要があります。  
 ```json
   "scripts": {
     "start": "webpack-dev-server --open",
   },
 ```
-
 <br>
 
-### CSSを読み込む方法
-CSSを読み込んでJS内で使用するだけであれば、```webpack.config.js``` にこちらを定義します。  
-ただし、これだとHTMLからCSSが参照されないので、HTMLを使うのであればCSSをdocフォルダ配下に出力する必要があります。  
-しかしwebpackの標準機能ではCSSの出力機能がないのでそれについてはプラグインを使っていきます。  
-具体的な使い方はこの後に記述します「CSSをアウトプットする方法」を参照して下さい。
+### CSSローダー
+バンドルせずにCSSファイルとしてdist配下に出力します。  
+CSSをアウトプットするには、プラグイン```mini-css-extract-plugin```が必要になります。  
 ```
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-         'style-loader',
-         'css-loader'
-        ]
-      },
+npm install --save-dev css-loader style-loader mini-css-extract-plugin
 ```
-
-上述の設定だけでは不足していて、
-エントリポイントの[/index.js](./src/js/index.js)で、以下の記述のようにCSSimportして初めてCSSを参照することが可能になります。  
-```javascript
-import '../css/style.css';
-```
-
 <br>
 
-### CSSをアウトプットする方法
-CSSをアウトプットするには、まずは```mini-css-extract-plugin```というプラグインが必要になります。  
-```json
-  "devDependencies": {
-    "mini-css-extract-plugin": "^1.3.1",
-  }
-```
 
-上記をインストール後、```webpack.config.js```に以下のように設定します。  
+上記をインストール後、[webpack.config.js](webpack.config.js)に以下のように設定します。  
 ```
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
   module: {
     rules: [
@@ -185,8 +173,9 @@ module.exports = {
 };
 
 ```
+<br>
 
-CSSをアウトプットしても[/index.js](./src/js/index.js)で、以下の記述の記述は必要です。  
+[/index.js](./src/js/index.js)で、以下の記述の記述は必要です。忘れずに。  
 ```
 import '../css/style.css';
 ```
@@ -194,13 +183,14 @@ import '../css/style.css';
 <br>
 
 ### 画像をアウトプットする方法
-画像のアウトプットは簡単です。  
 npmでまずは以下をインストールします。  
 ```
 "url-loader": "^4.1.1",
 ```
+<br>
 
-その後、以下の設定を```webpack.config.js```に追加すればOKです。ビルド時に```docs```配下に画像が出力されます。  
+[webpack.config.js](webpack.config.js)に以下を追加すればOKです。  
+ビルド時に```docs```配下に画像が出力されます。  
 ```
   module: {
     rules: [
@@ -218,13 +208,14 @@ npmでまずは以下をインストールします。
 
 ### HTMLをアウトプットする方法
 HTMLをアウトプットするには、プラグインが必要です。  
-まずは以下の２つをnpmでインストールします。  
 ```
 "html-loader": "^1.3.2",
 "html-webpack-plugin": "^4.5.0",
 ```
+<br>
 
-その後、以下の設定を```webpack.config.js```に追加すればOKです。ビルド時に```docs```配下にHTMLが出力されます。このHTMLにはJSやCSSのパスが自動で含まれます。  
+[webpack.config.js](webpack.config.js)に以下を追加すればOKです。  
+ビルド時に```docs```配下にHTMLが出力されます。このHTMLにはJSやCSSのパスが自動で含まれます。  
 ```
   module: {
     rules: [
@@ -253,6 +244,7 @@ HTMLをアウトプットするには、プラグインが必要です。
 ```
 npm install sass-loader sass 
 ```
+<br>
 
 ```webpack.config.js```に以下を追加します。
 ```
@@ -276,12 +268,12 @@ module: {
     })
   ]
 ```
+<br>
 
 [/index.js](./src/js/index.js)で、以下の記述をします。  
 ```
 import "../css/style.scss";
 ```
-
 <br>
 
 ### Sass でnpmモジュールのCSSを使う方法
@@ -289,13 +281,14 @@ import "../css/style.scss";
 ```sass
 @import "~animate.css";
 ```
+<br>
 
-上記は、animate.css を使った令です。こちらのモジュールを使うには以下でインストールする必要があります。
+上記は、[animate.css](https://animate.style/) を使った令です。  
 ```
 npm install animate.css --save
 ```
-
 <br>
+
 
 ## このプロジェクトの構成  
 
@@ -308,28 +301,6 @@ npm install animate.css --save
 | [js/index.js](./src/js/index.js)         | WebPackのエントリポイント       |
 | [js/main.js](./src/js/main.js)           | JSのメイン処理               |
 | [js/timer.js](./src/js/timer.js)         | メイン処理からimportされる関数・クラス |
-
-
-<br>
-
-## ローカルでの実行方法
-ブラウザで動かす方法を説明します。
-
-### 必要なアプリケーション
-```Node.js```
-
-### 実行
-ローカル環境でwebサーバを立ち上げて実行する方法です。  
-```
-npm start
-```
-
-### ビルド
-```dist```フォルダ配下にHTMLファイルとJavaScriptが生成されます。
-```
-npm run build
-```
-
 <br>
 
 ## 参考にしたサイト
