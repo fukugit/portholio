@@ -246,7 +246,7 @@ npm install sass-loader sass
 ```
 <br>
 
-```webpack.config.js```に以下を追加します。
+[webpack.config.js](webpack.config.js) に以下を追加します。
 ```
 module: {
   rules: 
@@ -271,19 +271,19 @@ module: {
 <br>
 
 [/index.js](./src/js/index.js)で、以下の記述をします。  
-```
+```javascript
 import "../css/style.scss";
 ```
 <br>
 
 ### Sass でnpmモジュールのCSSを使う方法
 [style.scss](./src/css/style.scss)で、以下の記述をします。  
-```sass
+```css
 @import "~animate.css";
 ```
 <br>
 
-上記は、[animate.css](https://animate.style/) を使った令です。  
+上記は、[animate.css](https://animate.style/) を使った例です。  
 ```
 npm install animate.css --save
 ```
