@@ -21719,13 +21719,10 @@ __webpack_require__.r(__webpack_exports__);
   require
  */
 
-
-// let body = document.getElementsByTagName('body')[0];
+ // let body = document.getElementsByTagName('body')[0];
 // body.classList.add('sky');
-
 // time.textContent = getTime();
 // console.log(html);
-
 
 /***/ }),
 
@@ -21740,12 +21737,10 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./timer */ "./src/js/timer.js");
 
-
 {
-  const stopwatch = new _timer__WEBPACK_IMPORTED_MODULE_0__["StopWatch"]();
+  var stopwatch = new _timer__WEBPACK_IMPORTED_MODULE_0__["StopWatch"]();
   time.textContent = stopwatch.getNow();
 }
-
 
 /***/ }),
 
@@ -21759,15 +21754,30 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StopWatch", function() { return StopWatch; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 var moment = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 
-class StopWatch {
-  getNow() {
-    const myDate = new Date();
-    const myCoolDate = moment(myDate).format('LT');
-    return myCoolDate;
+var StopWatch = /*#__PURE__*/function () {
+  function StopWatch() {
+    _classCallCheck(this, StopWatch);
   }
-}
+
+  _createClass(StopWatch, [{
+    key: "getNow",
+    value: function getNow() {
+      var myDate = new Date();
+      var myCoolDate = moment(myDate).format('LT');
+      return myCoolDate;
+    }
+  }]);
+
+  return StopWatch;
+}();
 
 /***/ })
 
