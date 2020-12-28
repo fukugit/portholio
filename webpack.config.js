@@ -42,6 +42,21 @@ module.exports = {
           name: './img/[name].[ext]',
         },
       },
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                // ES2015以降のコードを変換
+                '@babel/preset-env',
+              ]
+            }
+          }
+        ],
+        exclude: /node_modules/,
+      }
     ]
   },
   plugins: [

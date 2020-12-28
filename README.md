@@ -238,7 +238,7 @@ HTMLをアウトプットするには、以下のプラグインが必要です�
 
 <br>
 
-### Sassを使う方法
+### Sassローダー
 [コチラ](http://vistylee.com/webpack-sass-css/) を参考にしました。
 ```
 npm install sass-loader sass 
@@ -288,6 +288,34 @@ npm install animate.css --save
 ```
 <br>
 
+### Babel
+```
+npm install --save-dev babel-loader @babel/core @babel/preset-env
+```
+<br>
+
+[webpack.config.js](webpack.config.js) に以下を追加します。
+```
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                // ES2015以降のコードを変換
+                '@babel/preset-env',
+              ]
+            }
+          }
+        ],
+        exclude: /node_modules/,
+      }
+    ]
+  },
+```
 
 ## このプロジェクトの構成  
 
