@@ -21739,6 +21739,7 @@ __webpack_require__.r(__webpack_exports__);
 
 {
   var stopwatch = new _timer__WEBPACK_IMPORTED_MODULE_0__["StopWatch"]();
+  var time = document.getElementById('time');
   time.textContent = stopwatch.getNow();
 }
 
