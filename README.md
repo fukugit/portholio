@@ -1,5 +1,5 @@
-# learning-npm
-npm/webpack の学習用リポジトリです。  
+# learning-webpack
+webpack の学習用リポジトリです。  
 
 <br>
 
