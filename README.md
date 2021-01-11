@@ -3,6 +3,9 @@ npm/webpack の学習用リポジトリです。
 
 <br>
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Demo
 GitHubActions でビルドしています。  
 [デモ](https://fukugit.github.io/learning-webpack/)  
