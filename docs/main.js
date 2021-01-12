@@ -21714,15 +21714,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main */ "./src/js/main.js");
+/* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../css/style.scss */ "./src/css/style.scss");
-/* 
-  require
- */
 
- // let body = document.getElementsByTagName('body')[0];
-// body.classList.add('sky');
-// time.textContent = getTime();
-// console.log(html);
+
 
 /***/ }),
 
@@ -21730,55 +21725,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _timer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./timer */ "./src/js/timer.js");
-
-{
-  var stopwatch = new _timer__WEBPACK_IMPORTED_MODULE_0__["StopWatch"]();
-  var time = document.getElementById('time');
-  time.textContent = stopwatch.getNow();
-}
-
-/***/ }),
-
-/***/ "./src/js/timer.js":
-/*!*************************!*\
-  !*** ./src/js/timer.js ***!
-  \*************************/
-/*! exports provided: StopWatch */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StopWatch", function() { return StopWatch; });
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 var moment = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 
-var StopWatch = /*#__PURE__*/function () {
-  function StopWatch() {
-    _classCallCheck(this, StopWatch);
-  }
-
-  _createClass(StopWatch, [{
-    key: "getNow",
-    value: function getNow() {
-      var myDate = new Date();
-      var myCoolDate = moment(myDate).format('LT');
-      return myCoolDate;
-    }
-  }]);
-
-  return StopWatch;
-}();
+var myDate = new Date();
+var myCoolDate = moment(myDate).format('LT');
+var time = document.getElementById('time');
+time.textContent = myCoolDate;
 
 /***/ })
 

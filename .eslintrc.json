@@ -1,0 +1,13 @@
+{
+  // airbnbルールセットの継承
+  "extends": "airbnb",
+
+  // ブラウザで動作
+  "env": {
+    "browser": true
+  },
+
+  // ルールの追加
+  "rules": {
+  }
+}
