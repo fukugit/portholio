@@ -16,6 +16,7 @@ module.exports = {
   },
   module: {
     rules: [
+      // HTMLローダー
       {
         test: /\.html$/,
         use: {
@@ -25,6 +26,7 @@ module.exports = {
           }
         }
       },
+      // sass ローダー
       {
         test: /\.s[ac]ss$/i,
         use: [
@@ -35,6 +37,7 @@ module.exports = {
           "sass-loader",
         ],
       },
+      // 画像ローダー
       {
         test: /\.(png|jpe?g|gif)$/i,
         loader: 'file-loader',
@@ -42,6 +45,7 @@ module.exports = {
           name: './img/[name].[ext]',
         },
       },
+      // Babel ローダー
       {
         test: /\.js$/,
         use: [
@@ -56,7 +60,17 @@ module.exports = {
           }
         ],
         exclude: /node_modules/,
-      }
+      },
+      // ESLint
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        options: {
+          fix: false,
+          failOnError: true,
+        }
+      },
     ]
   },
   plugins: [

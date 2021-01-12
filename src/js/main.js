@@ -1,7 +1,7 @@
-import {StopWatch} from './timer';
+const moment = require('moment');
 
-{
-  const stopwatch = new StopWatch();
-  let time = document.getElementById('time');
-  time.textContent = stopwatch.getNow();
-}
+const myDate = new Date();
+const myCoolDate = moment(myDate).format('LT');
+
+const time = document.getElementById('time');
+time.textContent = myCoolDate;
