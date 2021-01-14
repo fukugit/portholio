@@ -5,12 +5,22 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/js/index.js',
+  entry: {
+    main: './src/js/index.js',
+    sub: './src/js/sub.js'
+  },
   mode: "development",
   devtool: "source-map",
   output: {
       path: `${__dirname}/docs`,
-      filename: 'main.js'
+      filename: '[name].js'
+  },
+  // 共通のライブラリを分離する。 momentなど
+  optimization: {
+    splitChunks: {
+      name: 'commonlib',
+      chunks: 'initial',
+    }
   },
   devServer: {
       contentBase: './docs'
@@ -76,6 +86,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      // TODO HTMLを複数指定する方法
+      // https://gist.github.com/giisyu/12dfe2a4bde329b8ea99747fe87f63a9
       template: "./src/html/index.html"
     }),
     new MiniCssExtractPlugin({

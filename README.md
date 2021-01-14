@@ -420,6 +420,24 @@ const webpackConfig = {
 ```
 <br>
 
+### 複数エントリポイントを指定する
+[webpack.config.js](webpack.config.js)  
+```javascript
+  // 2つのエントリポイントを指定。
+  entry: {
+    main: './src/js/index.js',
+    sub: './src/js/sub.js'
+  },
+  // 共通のライブラリを分離する。
+  optimization: {
+    splitChunks: {
+      name: 'commonlib',
+      chunks: 'initial',
+    }
+  }
+```
+<br>
+
 
 
 ## このプロジェクトの構成  
