@@ -10,7 +10,7 @@ webpack の学習用リポジトリです。
 - [Demo](#demo)
 - [ローカルで起動](#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%A7%E8%B5%B7%E5%8B%95)
   - [WebPackのサーバ起動](#webpack%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%90%E8%B5%B7%E5%8B%95)
-- [ローカルでデバッグ](#%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%A7%E3%83%87%E3%83%90%E3%83%83%E3%82%B0)
+- [VSCodeでデバッグ](#vscode%E3%81%A7%E3%83%87%E3%83%90%E3%83%83%E3%82%B0)
   - [WebPackのサーバ起動](#webpack%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%90%E8%B5%B7%E5%8B%95-1)
   - [ターミナルで実行](#%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%E3%81%A7%E5%AE%9F%E8%A1%8C)
   - [ブラウザでサイトにアクセス](#%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%A7%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9)
@@ -18,15 +18,16 @@ webpack の学習用リポジトリです。
   - [JavaScriptファイルにブレークポイントを貼る](#javascript%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E3%82%92%E8%B2%BC%E3%82%8B)
 - [学んだこと](#%E5%AD%A6%E3%82%93%E3%81%A0%E3%81%93%E3%81%A8)
   - [npmでモジュール管理](#npm%E3%81%A7%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E7%AE%A1%E7%90%86)
-  - [モジュールのコマンド(webpackとか)を実行する方法](#%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89webpack%E3%81%A8%E3%81%8B%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95)
+  - [npmモジュールのコマンドを実行する方法](#npm%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95)
   - [Webpackをとりあえず動かす方法](#webpack%E3%82%92%E3%81%A8%E3%82%8A%E3%81%82%E3%81%88%E3%81%9A%E5%8B%95%E3%81%8B%E3%81%99%E6%96%B9%E6%B3%95)
-  - [WebPackのWebサーバを利用する方法](#webpack%E3%81%AEweb%E3%82%B5%E3%83%BC%E3%83%90%E3%82%92%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95)
+  - [WebPackのWebサーバ起動](#webpack%E3%81%AEweb%E3%82%B5%E3%83%BC%E3%83%90%E8%B5%B7%E5%8B%95)
   - [CSSローダー](#css%E3%83%AD%E3%83%BC%E3%83%80%E3%83%BC)
   - [画像ファイルローダー](#%E7%94%BB%E5%83%8F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%83%AD%E3%83%BC%E3%83%80%E3%83%BC)
   - [HTMLローダー](#html%E3%83%AD%E3%83%BC%E3%83%80%E3%83%BC)
   - [Sassローダー](#sass%E3%83%AD%E3%83%BC%E3%83%80%E3%83%BC)
   - [Sass でnpmモジュールのCSSを使う方法](#sass-%E3%81%A7npm%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AEcss%E3%82%92%E4%BD%BF%E3%81%86%E6%96%B9%E6%B3%95)
   - [Babel](#babel)
+  - [ESLint](#eslint)
 - [このプロジェクトの構成](#%E3%81%93%E3%81%AE%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%81%AE%E6%A7%8B%E6%88%90)
 - [参考にしたサイト](#%E5%8F%82%E8%80%83%E3%81%AB%E3%81%97%E3%81%9F%E3%82%B5%E3%82%A4%E3%83%88)
 
@@ -398,6 +399,26 @@ npm install --save-dev eslint eslint-loader eslint-config-airbnb eslint-plugin-r
 }
 ```
 <br>
+
+### ビルド先のクリーニング
+詳細は[公式](https://github.com/johnagan/clean-webpack-plugin)を参照  
+```
+npm install --save-dev clean-webpack-plugin
+```
+<br>
+
+[webpack.config.js](webpack.config.js)  
+```javascript
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+const webpackConfig = {
+    plugins: [
+        new CleanWebpackPlugin(),
+    ],
+};
+```
+<br>
+
 
 
 ## このプロジェクトの構成  
