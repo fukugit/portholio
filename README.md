@@ -399,6 +399,26 @@ npm install --save-dev eslint eslint-loader eslint-config-airbnb eslint-plugin-r
 ```
 <br>
 
+### ビルド先のクリーニング
+詳細は[公式](https://github.com/johnagan/clean-webpack-plugin)を参照  
+```
+npm install --save-dev clean-webpack-plugin
+```
+<br>
+
+[webpack.config.js](webpack.config.js)  
+```javascript
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+const webpackConfig = {
+    plugins: [
+        new CleanWebpackPlugin(),
+    ],
+};
+```
+<br>
+
+
 
 ## このプロジェクトの構成  
 
