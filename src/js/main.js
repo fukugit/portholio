@@ -5,3 +5,4 @@ const myCoolDate = moment(myDate).format('LT');
 
 const time = document.getElementById('time');
 time.textContent = myCoolDate;
+console.log('This is main.js');

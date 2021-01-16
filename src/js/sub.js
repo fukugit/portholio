@@ -1,8 +1,8 @@
 const moment = require('moment');
 
 const myDate = new Date();
-myDate.setMinutes(myDate.getMinutes() + 30);
-const myCoolDate = moment(myDate).format('LT');
+const myCoolDate = moment(myDate).format('MMMM Do YYYY, h:mm:ss a');
 
-const time = document.getElementById('comment');
-time.textContent = `${myCoolDate} までに作ったろ！`;
+const time = document.getElementById('time');
+time.textContent = myCoolDate;
+console.log('This is sub.js');

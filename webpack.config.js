@@ -86,9 +86,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      // TODO HTMLを複数指定する方法
-      // https://gist.github.com/giisyu/12dfe2a4bde329b8ea99747fe87f63a9
-      template: "./src/html/index.html"
+      template: "./src/html/index.html", // 元HTML
+      filename: "index.html",  // 出力先HTML
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/html/sub.html",
+      filename: "sub.html",
+      chunks: ['sub']
     }),
     new MiniCssExtractPlugin({
       filename:'css/style.css'
