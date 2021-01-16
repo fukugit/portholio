@@ -32,9 +32,6 @@ body .contanor .column img {
 body .contanor .column .time {
   display: inline;
 }
-body .contanor .column .comment {
-  display: inline;
-}
 body .contanor .column .fukidashi1 {
   position: absolute;
   top: 50px;

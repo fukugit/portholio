@@ -501,6 +501,7 @@ var myDate = new Date();
 var myCoolDate = moment(myDate).format('LT');
 var time = document.getElementById('time');
 time.textContent = myCoolDate;
+console.log('This is main.js');
 
 /***/ })
 

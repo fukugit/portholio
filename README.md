@@ -105,7 +105,7 @@ npx webpack
 <br>
 
 [webpack.config.js](webpack.config.js)  
-```
+```javascript
 module.exports = {
   mode: 'development',
   entry: './src/js/index.js',     // ここがエントリポイントになります。
@@ -156,7 +156,7 @@ HTMLを自分で用意して、ビルド後のJSファイルを読みます。
 <br>
 
 [webpack.config.js](webpack.config.js)  
-```
+```javascript
 module.exports = {
   devServer: {
       contentBase: './docs'  // Webサーバ起動時にどのファイルを参照するかの設定です。
@@ -184,7 +184,7 @@ npm install --save-dev css-loader style-loader mini-css-extract-plugin
 <br>
 
 [webpack.config.js](webpack.config.js)  
-```
+```javascript
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -205,12 +205,11 @@ module.exports = {
     })
   ],
 };
-
 ```
 <br>
 
 [/index.js](./src/js/index.js)で、以下の記述の記述は必要です。忘れずに。  
-```
+```javascript
 import '../css/style.css';
 ```
 
@@ -225,7 +224,7 @@ import '../css/style.css';
 
 [webpack.config.js](webpack.config.js)  
 ビルド時に```docs```配下に画像が出力されます。  
-```
+```javascript
   module: {
     rules: [
       {
@@ -250,7 +249,7 @@ import '../css/style.css';
 
 [webpack.config.js](webpack.config.js)  
 ビルド時に```docs```配下にHTMLが出力されます。このHTMLにはJSやCSSのパスが自動で含まれます。  
-```
+```javascript
   module: {
     rules: [
       {
@@ -284,7 +283,7 @@ npm install sass-loader sass
 <br>
 
 [webpack.config.js](webpack.config.js) に以下を追加します。
-```
+```javascript
 module: {
   rules: 
       {
@@ -334,7 +333,7 @@ npm install --save-dev babel-loader @babel/core @babel/preset-env
 <br>
 
 [webpack.config.js](webpack.config.js)  
-```
+```javascript
   module: {
     rules: [
       {
@@ -367,7 +366,7 @@ npm install --save-dev eslint eslint-loader eslint-config-airbnb eslint-plugin-r
 <br>
 
 [webpack.config.js](webpack.config.js)  
-```
+```javascript
   module: {
     rules: [
       {
@@ -385,7 +384,7 @@ npm install --save-dev eslint eslint-loader eslint-config-airbnb eslint-plugin-r
 <br>
 
 [.eslintrc.json](.eslintrc.json)  
-```
+```javascript
 {
   // airbnbルールセットの継承
   "extends": "airbnb",
@@ -436,6 +435,37 @@ const webpackConfig = {
       chunks: 'initial',
     }
   }
+```
+<br>
+
+### 複数HTMLと対応するJavaScriptを紐付ける
+[コチラ](https://github.com/jantimon/html-webpack-plugin)を参照  
+[webpack.config.js](webpack.config.js)  
+```javascript
+  // 2つのエントリポイントを指定。
+  entry: {
+    main: './src/js/index.js',
+    sub: './src/js/sub.js'
+  },
+  // 共通のライブラリを分離する。
+  optimization: {
+    splitChunks: {
+      name: 'commonlib',
+      chunks: 'initial',
+    }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/html/index.html", // 元HTML
+      filename: "index.html",  // 出力先HTML
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/html/sub.html",
+      filename: "sub.html",
+      chunks: ['sub']
+    }),
+  ]
 ```
 <br>
 

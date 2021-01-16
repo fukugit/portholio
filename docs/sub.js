@@ -467,10 +467,10 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 var moment = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 
 var myDate = new Date();
-myDate.setMinutes(myDate.getMinutes() + 30);
-var myCoolDate = moment(myDate).format('LT');
-var time = document.getElementById('comment');
-time.textContent = "".concat(myCoolDate, " \u307E\u3067\u306B\u4F5C\u3063\u305F\u308D\uFF01");
+var myCoolDate = moment(myDate).format('MMMM Do YYYY, h:mm:ss a');
+var time = document.getElementById('time');
+time.textContent = myCoolDate;
+console.log('This is sub.js');
 
 /***/ })
 
