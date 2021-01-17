@@ -6,8 +6,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    main: './src/js/index.js',
-    sub: './src/js/sub.js'
+    index: './src/index.js',
+    manga: './src/20210117-manga/js/index.js',
+    coffeeshop: './src/20210118-coffeeshop/js/index.js'
   },
   mode: "development",
   devtool: "source-map",
@@ -86,17 +87,22 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/html/index.html", // 元HTML
+      template: "./src/index.html", // 元HTML
       filename: "index.html",  // 出力先HTML
-      chunks: ['main']
+      chunks: ['index']
     }),
     new HtmlWebpackPlugin({
-      template: "./src/html/sub.html",
-      filename: "sub.html",
-      chunks: ['sub']
+      template: "./src/20210117-manga/html/index.html", // 元HTML
+      filename: "20210117-manga.html",  // 出力先HTML
+      chunks: ['manga']
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/20210118-coffeeshop/html/index.html", // 元HTML
+      filename: "20210118-coffeeshop.html",  // 出力先HTML
+      chunks: ['coffeeshop']
     }),
     new MiniCssExtractPlugin({
-      filename:'css/style.css'
+      filename:'css/[name].css'
     }),
     new CleanWebpackPlugin(),
   ],
