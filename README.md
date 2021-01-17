@@ -470,6 +470,20 @@ const webpackConfig = {
 ```
 <br>
 
+### 複数HTMLで同じ名前のCSSファイルを使用する方法
+[webpack.config.js](webpack.config.js)  
+```javascript
+    new HtmlWebpackPlugin({
+      template: "./src/20210117-manga/html/index.html", // 元HTML
+      filename: "20210117-manga.html",  // 出力先HTML
+      chunks: ['manga']
+    }),
+
+    new MiniCssExtractPlugin({
+      filename:'css/[name].css'  // manga.css が出力されます。
+    }),
+```
+<br>
 
 
 ## このプロジェクトの構成  
