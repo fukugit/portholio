@@ -1,6 +1,66 @@
+@charset "UTF-8";
+/* 共通部分
+-------------------------------- */
+html {
+  font-size: 100%;
+}
+
 body {
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: #432;
+  background-color: white;
   margin: 0;
-  background-color: aqua;
+}
+body .logo {
+  width: 210px;
+  margin-top: 14px;
+}
+body .main-nav {
+  display: flex;
+  /************************ flexbox **********************************/
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+}
+body .main-nav li {
+  margin-left: 36px;
+}
+body .main-nav a {
+  color: #432;
+}
+body .main-nav a:hover {
+  color: #0bd;
+}
+
+.big-bg {
+  background-size: cover;
+  /* 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する */
+  /* background-size: contain; */
+  /* 描画領域内に背景画像のすべてが表示されるよう拡大・縮小させる場合。これだと余白ができてしまう。 */
+  background-position: center top;
+  /* center:中央に表示します。 top:上部に表示します。*/
+  background-repeat: no-repeat;
+}
+
+#home {
+  background-size: cover;
+  /* 画像が元と同じように表示されるようにトリミングします。 */
+  background-position: center;
+  /* 画像を中央に表示します。 */
+  background-image: url(../img/main-bg.jpg);
+  min-height: 100vh;
+  /* ビューポートの高さに対する割合。100の場合は100%となります。 */
+}
+#home #home .page-title {
+  text-transform: none;
+}
+
+.page-header {
+  display: flex;
+  /************************ flexbox **********************************/
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=coffeeshop.css.map*/

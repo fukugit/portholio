@@ -486,6 +486,46 @@ const webpackConfig = {
 ```
 <br>
 
+### Sassでurl()を利用する方法
+[webpack.config.js](webpack.config.js)  
+```javascript
+      // sass ローダー
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              url: false // resolve-url-loader を利用するために必要です。
+            }
+          },
+          {
+            // SASS内で url()を利用するために必要なローダーです。
+            loader: 'resolve-url-loader'
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true, // resolve-url-loader を利用するために必要です。
+            }
+          }
+        ],
+      },
+```
+<br>
+
+エントリポイント
+```javascript
+// SASS 内で url()で画像を利用する場合はここに定義する必要があるので注意。
+// なぜ必要かは不明...
+import '../img/main-bg.jpg';
+```
+<br>
+
 
 ## このプロジェクトの構成  
 

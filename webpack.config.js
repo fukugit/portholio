@@ -1,3 +1,4 @@
+const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -13,7 +14,8 @@ module.exports = {
   mode: "development",
   devtool: "source-map",
   output: {
-      path: `${__dirname}/docs`,
+      // path: `${__dirname}/docs`,
+      path: path.resolve(__dirname, "docs"),
       filename: '[name].js'
   },
   // 共通のライブラリを分離する。 momentなど
@@ -40,22 +42,48 @@ module.exports = {
       },
       // sass ローダー
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.scss$/,
         use: [
-          MiniCssExtractPlugin.loader,
-          // Translates CSS into CommonJS
-          "css-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              url: false // resolve-url-loader を利用するために必要です。
+            }
+          },
+          {
+            // SASS内で url()を利用するために必要なローダーです。
+            loader: 'resolve-url-loader'
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true, // resolve-url-loader を利用するために必要です。
+            }
+          }
         ],
       },
       // 画像ローダー
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        loader: 'file-loader',
-        options: {
-          name: './img/[name].[ext]',
-        },
+        test: /\.(png|jpg|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: './img/[name].[ext]',
+            }
+          },
+          // {
+          //   loader: 'url-loader',
+          //   options: {
+          //     limit: 1000,
+          //     name: './img/[name].[ext]',
+          //   }
+          // },
+        ]
       },
       // Babel ローダー
       {

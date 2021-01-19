@@ -169,6 +169,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/20210118-coffeeshop/img/main-bg.jpg":
+/*!*************************************************!*\
+  !*** ./src/20210118-coffeeshop/img/main-bg.jpg ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "./img/main-bg.jpg");
+
+/***/ }),
+
 /***/ "./src/20210118-coffeeshop/js/index.js":
 /*!*********************************************!*\
   !*** ./src/20210118-coffeeshop/js/index.js ***!
@@ -179,6 +192,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./src/20210118-coffeeshop/css/style.scss");
+/* harmony import */ var _img_main_bg_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/main-bg.jpg */ "./src/20210118-coffeeshop/img/main-bg.jpg");
+ // SASS 内で url()で画像を利用する場合はここに定義する必要があるので注意。
+// なぜ必要かは不明...
+
 
 
 /***/ })
