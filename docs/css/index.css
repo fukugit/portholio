@@ -1,39 +1,66 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Sacramento&display=swap);
 @charset "UTF-8";
+/* 
+  配色はこちらを参照
+  https://colordrop.io/color/17935
+ */
 body {
   margin: 0;
-  background-color: #364f6b;
+  background-color: #13334c;
   /* header */
   /* main */
   /* header */
 }
 body header {
-  margin: 60px auto;
-  max-width: 800px;
+  background-color: #005792;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 body header .title {
-  max-width: 800px;
-  height: 100px;
-  color: aliceblue;
+  width: 100%;
+  height: 200px;
+  color: #f6f6e9;
   font-family: "Noto Serif", serif;
   font-size: 3em;
   text-align: center;
-  line-height: 100px;
+  line-height: 200px;
+  animation-name: title-animation;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+@keyframes title-animation {
+  0% {
+    font-size: 3.3em;
+  }
+  20% {
+    font-size: 3.5em;
+  }
+  30% {
+    font-size: 4em;
+  }
+  60% {
+    font-size: 5em;
+  }
+  100% {
+    font-size: 3em;
+  }
 }
 body main {
   max-width: 800px;
-  margin: 60px auto;
+  margin: 20px auto;
 }
 body main .contanor {
   width: 100%;
   display: flex;
   flex-direction: column;
   animation-name: box-animation;
-  animation-duration: 2s;
+  animation-duration: 1s;
+  animation-delay: 1s;
   animation-iteration-count: 1;
-  opacity: 1;
+  opacity: 0;
   animation-fill-mode: forwards;
 }
 @keyframes box-animation {
@@ -53,7 +80,7 @@ body main .grid {
 body main .grid .box {
   position: relative;
   /* div全体をリンク化するためです。 */
-  background-color: #fc5185;
+  background-color: #fd5f00;
   height: 200px;
   text-align: center;
   line-height: 200px;
@@ -67,7 +94,7 @@ body main .grid .box a {
   height: 100%;
   width: 100%;
   text-decoration: none;
-  color: #f0f0f0;
+  color: #f6f6e9;
 }
 body main .grid .box:hover {
   animation: pulse;
@@ -76,14 +103,59 @@ body main .grid .box:hover {
   opacity: 1;
 }
 body footer {
-  margin: 60px auto;
-  max-width: 800px;
-  display: flex;
+  width: 100%;
+  background-color: #005792;
 }
 body footer .contanor {
-  width: 100%;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: space-between;
+  min-width: 800px;
+  max-width: 800px;
+  height: 300px;
+  background-color: #306b92;
+  animation-name: footer-animation;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+body footer .contanor .explain {
+  min-width: 400px;
+  height: 250px;
+  margin-top: 20px;
+  margin-left: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #f6f6e9;
+}
+body footer .contanor .sosial {
+  min-width: 300px;
   height: 200px;
-  background-color: beige;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+body footer .contanor .sosial .box {
+  margin-right: 10px;
+  width: 45px;
+}
+body footer .contanor .sosial .box img {
+  width: 45px;
+  /* 横幅を割合で指定 */
+  height: auto;
+  /* 高さは自動指定 */
+}
+@keyframes footer-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=index.css.map*/
