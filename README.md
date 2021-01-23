@@ -528,17 +528,6 @@ import '../img/main-bg.jpg';
 <br>
 
 
-## このプロジェクトの構成  
-
-| ファイル / ディレクトリ                                         | 概要                     |
-| -------------------------------------------- | ---------------------- |
-| [webpack.config.js](./webpack.config.js)     | Webpackの設定ファイル         |
-| [package.json](./package.json)               | npm設定ファイル              |
-| [js/index.js](./src/js/index.js)         | WebPackのエントリポイント       |
-| [js/main.js](./src/js/main.js)           | JSのメイン処理               |
-| [js/timer.js](./src/js/timer.js)         | メイン処理からimportされる関数・クラス |
-<br>
-
 ## 参考にしたサイト
 [HTMLファイルをdist配下に出力する方法](https://ema-hiro.hatenablog.com/entry/2017/10/12/015748)  
 [画像をoutputする方法](https://note.com/koki_nagai/n/n5a637b6b727d)  
