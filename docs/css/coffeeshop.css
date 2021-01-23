@@ -4,63 +4,85 @@
 html {
   font-size: 100%;
 }
-
-body {
+html body {
   font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
   line-height: 1.7;
   color: #432;
   background-color: white;
   margin: 0;
 }
-body .logo {
-  width: 210px;
-  margin-top: 14px;
-}
-body .main-nav {
-  display: flex;
-  /************************ flexbox **********************************/
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  margin-top: 34px;
-  list-style: none;
-}
-body .main-nav li {
-  margin-left: 36px;
-}
-body .main-nav a {
-  color: #432;
-}
-body .main-nav a:hover {
-  color: #0bd;
+html body .wrapper {
+  max-width: 1100px;
+  /* 横幅の最大長さ */
+  margin: 0 auto;
+  /* このclassが指定されているエレメントを中央に配置する。*/
+  padding: 0 4%;
+  /* スマートフォン向け余白 */
 }
 
-.big-bg {
-  background-size: cover;
-  /* 縦横比は保持して、背景領域を完全に覆う最小サイズになるように背景画像を拡大縮小する */
-  /* background-size: contain; */
-  /* 描画領域内に背景画像のすべてが表示されるよう拡大・縮小させる場合。これだと余白ができてしまう。 */
-  background-position: center top;
-  /* center:中央に表示します。 top:上部に表示します。*/
-  background-repeat: no-repeat;
-}
-
+/* Home画面
+-------------------------------- */
 #home {
   background-size: cover;
   /* 画像が元と同じように表示されるようにトリミングします。 */
   background-position: center;
-  /* 画像を中央に表示します。 */
+  /* center:中央に表示します。 top:上部に表示します。*/
+  background-repeat: no-repeat;
   background-image: url(../img/main-bg.jpg);
   min-height: 100vh;
   /* ビューポートの高さに対する割合。100の場合は100%となります。 */
+  /* page-header End */
+  /* home-content End */
 }
-#home #home .page-title {
-  text-transform: none;
-}
-
-.page-header {
+#home .page-header {
   display: flex;
-  /************************ flexbox **********************************/
   justify-content: space-between;
 }
+#home .page-header .logo {
+  width: 210px;
+  margin-top: 14px;
+  animation: bounce;
+  /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+  /* don't forget to set a duration! */
+}
+#home .page-header .main-nav {
+  display: flex;
+  text-transform: uppercase;
+  /* 大文字へ */
+  margin-top: 34px;
+  list-style: none;
+}
+#home .page-header .main-nav li {
+  margin-left: 36px;
+}
+#home .page-header .main-nav a {
+  color: #432;
+}
+#home .page-header .main-nav a:hover {
+  color: #0bd;
+}
+#home .home-content {
+  text-align: center;
+  /* テキスト中央揃え */
+  margin-top: 10%;
+}
+#home .home-content p {
+  /*rem（レム）は「root em」の略。 最上位のHTML要素である「HTML」の文字サイズを基準とした相対値で文字サイズを規定する。 */
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
+#home .home-content .button {
+  font-size: 1.375rem;
+  background: #0bd;
+  color: #fff;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+#home .home-content .button:hover {
+  background: #0090aa;
+}
+
+/* #home End */
 
 /*# sourceMappingURL=coffeeshop.css.map*/
