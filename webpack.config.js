@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
+    index: './src/top/js/index.js',
     manga: './src/20210117-manga/js/index.js',
     coffeeshop: './src/20210118-coffeeshop/js/index.js'
   },
@@ -115,18 +115,18 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html", // 元HTML
+      template: "./src/top/html/index.html", // 元HTML
       filename: "index.html",  // 出力先HTML
       chunks: ['index']
     }),
     new HtmlWebpackPlugin({
-      template: "./src/20210117-manga/html/index.html", // 元HTML
-      filename: "20210117-manga.html",  // 出力先HTML
+      template: "./src/20210117-manga/html/index.html",
+      filename: "20210117-manga.html",
       chunks: ['manga']
     }),
     new HtmlWebpackPlugin({
-      template: "./src/20210118-coffeeshop/html/index.html", // 元HTML
-      filename: "20210118-coffeeshop.html",  // 出力先HTML
+      template: "./src/20210118-coffeeshop/html/index.html",
+      filename: "20210118-coffeeshop.html",
       chunks: ['coffeeshop']
     }),
     new MiniCssExtractPlugin({
