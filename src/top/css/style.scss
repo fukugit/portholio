@@ -164,7 +164,7 @@ body{
       display: flex;
       justify-content: space-between;
       width: 800px;
-      height: 300px;
+      height: 400px;
       background-color: $color-footer;
       animation-name: footer-animation;
       animation-duration: 1s;
@@ -205,6 +205,8 @@ body{
         @include tab {
           width: 100%;
           height: auto;
+          margin-left: 0;
+          margin-right: 0;
           justify-content: flex-start;
         };
 
