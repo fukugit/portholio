@@ -9,7 +9,8 @@ module.exports = {
   entry: {
     index: './src/top/js/index.js',
     manga: './src/20210117-manga/js/index.js',
-    coffeeshop: './src/20210118-coffeeshop/js/index.js'
+    coffeeshop: './src/20210118-coffeeshop/js/index.js',
+    blog: './src/20210124-blog/js/index.js'
   },
   mode: "development",
   devtool: "source-map",
@@ -128,6 +129,11 @@ module.exports = {
       template: "./src/20210118-coffeeshop/html/index.html",
       filename: "20210118-coffeeshop.html",
       chunks: ['coffeeshop']
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/20210124-blog/html/index.html",
+      filename: "20210124-blog.html",
+      chunks: ['blog']
     }),
     new MiniCssExtractPlugin({
       filename:'css/[name].css'

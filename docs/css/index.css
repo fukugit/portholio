@@ -138,13 +138,15 @@ body main .grid .box:hover {
 body footer {
   width: 100%;
   background-color: #005792;
+  bottom: 0;
+  /*下に固定*/
+  height: 200px;
 }
 body footer .contanor {
   margin: 30px auto 0;
   display: flex;
   justify-content: space-between;
   width: 800px;
-  height: 400px;
   background-color: #306b92;
   animation-name: footer-animation;
   animation-duration: 1s;
@@ -164,9 +166,9 @@ body footer .contanor {
 }
 body footer .contanor .explain {
   width: 400px;
-  height: 250px;
   margin-top: 20px;
   margin-left: 30px;
+  margin-bottom: 10px;
   padding: 10px;
   box-sizing: border-box;
   background-color: #f6f6e9;
@@ -181,7 +183,6 @@ body footer .contanor .explain {
 }
 body footer .contanor .sosial {
   width: 300px;
-  height: 200px;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 20px;
