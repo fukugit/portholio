@@ -9,7 +9,7 @@ body {
   background-color: #13334c;
   /* header */
   /* main */
-  /* header */
+  /* footer */
 }
 body header {
   background-color: #005792;
@@ -30,6 +30,18 @@ body header .title {
   animation-duration: 1s;
   animation-delay: 0s;
   animation-iteration-count: 1;
+}
+@media (max-width: 799px) {
+  body header .title {
+    width: 100%;
+    height: 200px;
+    color: #f6f6e9;
+    font-family: "Noto Serif", serif;
+    font-size: 2em;
+    text-align: center;
+    line-height: 200px;
+    animation: none;
+  }
 }
 @keyframes title-animation {
   0% {
@@ -52,6 +64,11 @@ body main {
   max-width: 800px;
   margin: 20px auto;
 }
+@media (max-width: 799px) {
+  body main {
+    width: 100%;
+  }
+}
 body main .contanor {
   width: 100%;
   display: flex;
@@ -62,6 +79,12 @@ body main .contanor {
   animation-iteration-count: 1;
   opacity: 0;
   animation-fill-mode: forwards;
+}
+@media (max-width: 799px) {
+  body main .contanor {
+    animation: none;
+    opacity: 1;
+  }
 }
 @keyframes box-animation {
   0% {
@@ -87,6 +110,11 @@ body main .grid .box {
   cursor: pointer;
   border-radius: 3%;
 }
+@media (max-width: 799px) {
+  body main .grid .box {
+    border-radius: 0;
+  }
+}
 body main .grid .box a {
   position: absolute;
   top: 0;
@@ -102,6 +130,11 @@ body main .grid .box:hover {
   animation-iteration-count: infinite;
   opacity: 1;
 }
+@media (max-width: 799px) {
+  body main .grid .box:hover {
+    animation: none;
+  }
+}
 body footer {
   width: 100%;
   background-color: #005792;
@@ -110,8 +143,7 @@ body footer .contanor {
   margin: 30px auto 0;
   display: flex;
   justify-content: space-between;
-  min-width: 800px;
-  max-width: 800px;
+  width: 800px;
   height: 300px;
   background-color: #306b92;
   animation-name: footer-animation;
@@ -121,8 +153,17 @@ body footer .contanor {
   opacity: 0;
   animation-fill-mode: forwards;
 }
+@media (max-width: 799px) {
+  body footer .contanor {
+    display: block;
+    width: 100%;
+    height: auto;
+    animation: none;
+    opacity: 1;
+  }
+}
 body footer .contanor .explain {
-  min-width: 400px;
+  width: 400px;
   height: 250px;
   margin-top: 20px;
   margin-left: 30px;
@@ -130,14 +171,29 @@ body footer .contanor .explain {
   box-sizing: border-box;
   background-color: #f6f6e9;
 }
+@media (max-width: 799px) {
+  body footer .contanor .explain {
+    margin: 0;
+    width: 100%;
+    animation: none;
+    opacity: 1;
+  }
+}
 body footer .contanor .sosial {
-  min-width: 300px;
+  width: 300px;
   height: 200px;
   margin-top: 20px;
   margin-left: 10px;
   margin-right: 20px;
   display: flex;
   justify-content: flex-end;
+}
+@media (max-width: 799px) {
+  body footer .contanor .sosial {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+  }
 }
 body footer .contanor .sosial .box {
   margin-right: 10px;
