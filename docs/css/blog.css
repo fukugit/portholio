@@ -37,7 +37,7 @@ body header .title {
 }
 body main {
   width: 1000px;
-  height: auto;
+  min-height: 1000px;
   margin: 20px auto;
 }
 @media (max-width: 799px) {
@@ -48,11 +48,12 @@ body main {
 body main .contanor {
   width: 100%;
   display: flex;
-  height: 500px;
+  height: auto;
 }
 body main .contanor article {
   background-color: #f6f6e9;
   width: 74%;
+  height: auto;
 }
 body main .contanor article .content {
   margin: 10px;
@@ -91,20 +92,73 @@ body main .contanor article .content .top .date span {
 }
 body main .contanor article .content .top .blogbody {
   margin-left: 100px;
+  display: flex;
+}
+body main .contanor article .content .top .blogbody img {
+  width: 340px;
+  height: auto;
+}
+body main .contanor article .content .top .blogbody .sentence {
+  margin-left: 20px;
+  margin-right: 10px;
 }
 body main .contanor aside {
   margin-left: 10px;
   background-color: #f6f6e9;
   width: 26%;
+  height: auto;
+}
+body main .contanor aside .content {
+  margin: 10px;
+}
+body main .contanor aside .content .title {
+  font-size: 1.1rem;
+  border-bottom: 2px #ea7070 solid;
+}
+body main .contanor aside ul.recent {
+  margin-left: -20px;
+}
+body main .contanor aside ul.recent li {
+  font-size: 0.7rem;
+  list-style: none;
+  margin-bottom: 10px;
+}
+body main .contanor aside ul.recent li a {
+  color: #ea7070;
+  text-decoration: none;
+}
+body main .contanor aside ul.recent li a:hover {
+  background-color: #e5cabe;
+}
+body main .contanor aside ul.category {
+  margin-left: -20px;
+}
+body main .contanor aside ul.category li {
+  font-size: 0.7rem;
+  list-style: none;
+  margin-bottom: 10px;
+  display: inline-block;
+  background-color: #ea7070;
+  padding: 5px;
+  border-radius: 5%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+body main .contanor aside ul.category li a {
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  color: #f6f6e9;
+}
+body main .contanor aside ul.category li:hover {
+  background-color: #e59572;
 }
 body footer {
   width: 100%;
   background-color: #e59572;
   position: absolute;
   /*←絶対位置*/
-  bottom: 0;
-  /*下に固定*/
-  height: 200px;
+  height: 50px;
 }
 
 /*# sourceMappingURL=blog.css.map*/
