@@ -6,6 +6,7 @@
  */
 $color-base:#2694ab;
 $color-second: #e59572;
+$color-hover: #e5cabe;
 $color-accent: #ea7070;
 $color-font:#f6f6e9;
 $color-main:#f6f6e9;
@@ -63,7 +64,7 @@ body{
 
   main {
     width: 1000px;
-    height: auto;
+    min-height: 1000px;
     margin: 20px auto;
     @include tab {
       width: 100%;
@@ -71,12 +72,13 @@ body{
     .contanor {
       width: 100%;
       display: flex;
-      height: 500px;
+      height: auto;
       @include tab {
       };
       article {
         background-color: $color-main;
         width: 74%;
+        height: auto;
         .content {
           margin: 10px;
           border: 1px $color-accent solid;
@@ -112,6 +114,15 @@ body{
             }
             .blogbody {
               margin-left: 100px;
+              display: flex;
+              img {
+                width: 340px;
+                height: auto;
+              }
+              .sentence {
+                margin-left: 20px;
+                margin-right: 10px;
+              }
             }
           }
         }
@@ -120,6 +131,52 @@ body{
         margin-left: 10px;
         background-color: $color-side;
         width: 26%;
+        height: auto;
+        .content {
+          margin: 10px;
+          .title {
+            font-size: 1.1rem;
+            border-bottom: 2px $color-accent solid;
+          }
+        }
+        ul.recent {
+          margin-left: -20px;
+          li {
+            font-size: 0.7rem;
+            list-style: none;
+            margin-bottom: 10px;
+            a {
+              color: $color-accent;
+              text-decoration: none;
+            }
+            a:hover {
+              background-color: $color-hover;
+            }
+          }
+        }
+        ul.category {
+          margin-left: -20px;
+          li {
+            font-size: 0.7rem;
+            list-style: none;
+            margin-bottom: 10px;
+            display: inline-block;
+            background-color: $color-accent;
+            padding: 5px;
+            border-radius: 5%;
+            box-sizing: border-box;
+            cursor: pointer;
+            a {
+              top: 0;
+              left: 0;
+              text-decoration: none;
+              color: $color-font;
+            }
+          }
+          li:hover {
+            background-color: $color-second;
+          }
+        }
       }
     }
   } /* main */
@@ -129,115 +186,15 @@ body{
     width: 100%;
     background-color: $color-second;
     position: absolute;/*←絶対位置*/
-    bottom: 0; /*下に固定*/
-    height: 200px;
-    .contanor {
-    };
+    // bottom: 0; /*下に固定*/
+    height: 50px;
+    // .contanor {
+    // };
 
   } /* footer */
 
 
 }
-
-// @media (max-width: 800px) {
-//   header {
-//     // background-color: $color-second;
-//     background-color: wheat;
-//     width: 100%;
-//     margin: 0 auto;
-//     display: flex;
-//     flex-direction: column;
-//     .title {
-//       width: 100%;
-//       height: 200px;
-//       color: $color-font;
-//       font-family: 'Noto Serif', serif;
-//       font-size: 1.5em;
-//       text-align: center;
-//       line-height: 200px;
-//     }
-//   } /* header */
-
-//   main {
-//     width: 100%;
-//     margin: 20px auto;
-//     .contanor {
-//       width: 100%;
-//       display: flex;
-//       flex-direction: column;
-//     }
-
-//     .grid {
-//       display: grid;
-//       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-//       // gap: 20px 20px; /* 横、縦 */
-
-//       .box {
-//         position: relative; /* div全体をリンク化するためです。 */
-//         background-color:$color-accent;
-//         height: 200px;
-//         text-align: center;
-//         line-height: 200px;
-//         cursor: pointer;
-//         border-radius: 3%;
-
-//         a {
-//           position: absolute;
-//           top: 0;
-//           left: 0;
-//           height:100%;
-//           width: 100%;
-//           text-decoration: none;
-//           color: $color-font;
-//         }
-//       }
-//     }
-//   } /* main */
-
-//   footer {
-//     width: 100%;
-//     background-color: $color-second;
-//     .contanor {
-//       margin: 30px auto 0;
-//       // display: flex;
-//       // justify-content: space-between;
-//       width: 100%;
-//       height: auto;
-//       background-color: $color-footer;
-//       opacity: 1;
-//       .explain {
-//         width: 100%;
-//         height: auto;
-//         margin-top: 20px;
-//         margin-left: 30px;
-//         padding: 10px;
-//         box-sizing: border-box;
-//         background-color: $color-font;
-//       }
-//       .sosial{
-//         width: 100%;
-//         height: auto;
-//         margin-top: 20px;
-//         margin-left: 10px;
-//         margin-right: 20px;
-//         // display: flex;
-//         // justify-content: flex-end;
-
-//         .box {
-//           margin-right: 10px;
-//           width: 45px;
-
-//           img {
-//             width: 45px;    /* 横幅を割合で指定 */
-//             height: auto;  /* 高さは自動指定 */
-//           }
-//         }
-//       }
-//     }
-//   } /* footer */
-// }
-
-
 
 
 
