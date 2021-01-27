@@ -27,9 +27,19 @@ body header .title {
   text-align: center;
   line-height: 200px;
 }
-@media (max-width: 799px) {
+@media (max-width: 999px) {
   body header .title {
     height: 100px;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    line-height: 100px;
+  }
+}
+@media (max-width: 480px) {
+  body header .title {
+    height: 100px;
+    width: 100%;
     font-size: 2em;
     text-align: center;
     line-height: 100px;
@@ -40,24 +50,53 @@ body main {
   min-height: 1000px;
   margin: 20px auto;
 }
-@media (max-width: 799px) {
+@media (max-width: 999px) {
   body main {
     width: 100%;
+    margin: 20px auto 0;
+  }
+}
+@media (max-width: 480px) {
+  body main {
+    width: 100%;
+    margin: 20px auto 0;
   }
 }
 body main .contanor {
   width: 100%;
   display: flex;
   height: auto;
+  /* article */
+}
+@media (max-width: 999px) {
+  body main .contanor {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  body main .contanor {
+    display: block;
+  }
 }
 body main .contanor article {
-  background-color: #f6f6e9;
+  background-color: #2694ab;
   width: 74%;
   height: auto;
 }
+@media (max-width: 999px) {
+  body main .contanor article {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  body main .contanor article {
+    width: 100%;
+  }
+}
 body main .contanor article .content {
   margin: 10px;
-  border: 1px #ea7070 solid;
+  border: 1.5px #ea7070 solid;
+  background-color: #f6f6e9;
 }
 body main .contanor article .content .top {
   position: relative;
@@ -94,6 +133,18 @@ body main .contanor article .content .top .blogbody {
   margin-left: 100px;
   display: flex;
 }
+@media (max-width: 999px) {
+  body main .contanor article .content .top .blogbody {
+    margin-left: 0;
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  body main .contanor article .content .top .blogbody {
+    margin-left: 0;
+    display: block;
+  }
+}
 body main .contanor article .content .top .blogbody img {
   width: 340px;
   height: auto;
@@ -102,11 +153,45 @@ body main .contanor article .content .top .blogbody .sentence {
   margin-left: 20px;
   margin-right: 10px;
 }
+body main .contanor article .page-layout {
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+body main .contanor article .page-layout .pager {
+  display: flex;
+  justify-content: space-around;
+}
+body main .contanor article .page-layout .pager .pre, body main .contanor article .page-layout .pager .next, body main .contanor article .page-layout .pager .page {
+  padding: 7px;
+  background-color: #e59572;
+  margin-right: 3px;
+  cursor: pointer;
+}
+body main .contanor article .page-layout .pager .pre:hover, body main .contanor article .page-layout .pager .next:hover, body main .contanor article .page-layout .pager .page:hover {
+  opacity: 0.3;
+}
+body main .contanor article .page-layout .pager .current {
+  background-color: #ea7070;
+}
 body main .contanor aside {
   margin-left: 10px;
   background-color: #f6f6e9;
   width: 26%;
-  height: auto;
+}
+@media (max-width: 999px) {
+  body main .contanor aside {
+    margin-left: 0;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  body main .contanor aside {
+    margin-left: 0;
+    padding-bottom: 20px;
+    width: 100%;
+  }
 }
 body main .contanor aside .content {
   margin: 10px;
@@ -153,12 +238,52 @@ body main .contanor aside ul.category li a {
 body main .contanor aside ul.category li:hover {
   background-color: #e59572;
 }
+body main .contanor aside ul.sns {
+  margin-left: -20px;
+}
+body main .contanor aside ul.sns li {
+  font-size: 0.7rem;
+  list-style: none;
+  margin-top: 20px;
+  background-color: #e59572;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 90%;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  /* div全体をリンク化するためです。 */
+}
+body main .contanor aside ul.sns li a {
+  position: absolute;
+  top: 10;
+  left: 20;
+  width: 100%;
+  height: 100%;
+  color: #f6f6e9;
+  text-decoration: none;
+}
+body main .contanor aside ul.sns li:hover {
+  background-color: #e5cabe;
+}
 body footer {
   width: 100%;
   background-color: #e59572;
   position: absolute;
   /*←絶対位置*/
   height: 50px;
+}
+@media (max-width: 999px) {
+  body footer {
+    position: relative;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  body footer {
+    height: 100px;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=blog.css.map*/
