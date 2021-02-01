@@ -91,7 +91,7 @@ body{
       @include sp {
         display: block;
       };
-      article {
+      article.blog {
         background-color: $color-base;
         width: 74%;
         height: auto;
@@ -102,7 +102,7 @@ body{
           width: 100%;
         }
         .content {
-          margin: 10px;
+          margin: 0 10px 10px 10px;
           border: 1.5px $color-accent solid;
           background-color: $color-main;
           .top {
@@ -114,6 +114,93 @@ body{
             }
             .category {
               margin-left: 100px;
+              .categorytag {
+                background:$color-accent;
+                cursor: pointer;
+                padding: 7px;
+                line-height: 7px;
+                box-sizing: border-box;
+                font-size: 0.7rem;
+                a {
+                  text-decoration: none;
+                  color: $color-font;
+                }
+              }
+            }
+            .date {
+              color: $color-font;
+              background:$color-accent;
+              border-radius: 50%;
+              width: 80px;
+              height: 80px;
+              font-size: 1rem;
+              text-align: center;
+              position: absolute;
+              top: 0;
+              padding-top: 10px;
+              span {
+                font-size: 0.8rem;
+                border-top: 1px $color-font solid;
+                padding-top: 6px;
+                display: block;
+                width: 60%;
+                margin: 0 auto;
+              }
+            }
+            .blogbody {
+              width: 100;
+              display: block;
+              text-align: center;
+              img {
+                max-width: 600px;
+                height: auto;
+                margin-bottom: 10px;
+              }
+              p {
+                text-align: left;
+                width: 600px;
+                margin: 0 auto 10px;
+              }
+            }
+          }
+        }
+      } /* article.blog */
+
+      article.index {
+        background-color: $color-base;
+        width: 74%;
+        height: auto;
+        @include tab {
+          width: 100%;
+        }
+        @include sp {
+          width: 100%;
+        }
+        .content {
+          margin: 0 10px 10px 10px;
+          border: 1.5px $color-accent solid;
+          background-color: $color-main;
+          .top {
+            position: relative;
+            padding: 4px;
+            margin-bottom: 40px;
+            .title {
+              margin-left: 100px;
+            }
+            .category {
+              margin-left: 100px;
+              .categorytag {
+                background:$color-accent;
+                cursor: pointer;
+                padding: 7px;
+                line-height: 7px;
+                box-sizing: border-box;
+                font-size: 0.7rem;
+                a {
+                  text-decoration: none;
+                  color: $color-font;
+                }
+              }
             }
             .date {
               color: $color-font;
@@ -140,7 +227,7 @@ body{
               display: flex;
               @include tab {
                 margin-left: 0;
-                display: block;
+                display: flex;
               }
               @include sp {
                 margin-left: 0;
@@ -178,7 +265,7 @@ body{
             }
           }
         }
-      } /* article */
+      } /* article.index */
       aside {
         margin-left: 10px;
         background-color: $color-side;
@@ -251,6 +338,11 @@ body{
             height: 40px;
             cursor: pointer;
             position: relative; /* div全体をリンク化するためです。 */
+            @include tab {
+              width: 40%;
+              display: inline-block;
+              margin-left: 20px;
+            }
             a {
               position: absolute;
               top: 10;
