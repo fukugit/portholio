@@ -10,7 +10,8 @@ module.exports = {
     index: './src/top/js/index.js',
     manga: './src/20210117-manga/js/index.js',
     coffeeshop: './src/20210118-coffeeshop/js/index.js',
-    blog: './src/20210124-blog/js/index.js'
+    blog: './src/20210124-blog/js/index.js',
+    blogmain: './src/20210124-blog/js/blog.js'
   },
   mode: "development",
   devtool: "source-map",
@@ -134,6 +135,11 @@ module.exports = {
       template: "./src/20210124-blog/html/index.html",
       filename: "20210124-blog.html",
       chunks: ['blog']
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/20210124-blog/html/blog.html",
+      filename: "blog.html",
+      chunks: ['blogmain']
     }),
     new MiniCssExtractPlugin({
       filename:'css/[name].css'
