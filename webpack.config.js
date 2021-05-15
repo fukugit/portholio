@@ -10,8 +10,8 @@ module.exports = {
     index: './src/top/js/index.js',
     manga: './src/20210117-manga/js/index.js',
     coffeeshop: './src/20210118-coffeeshop/js/index.js',
-    blog: './src/20210124-blog/js/index.js',
-    blogmain: './src/20210124-blog/js/blog.js'
+    blog1: './src/20210124-blog/js/index.js',
+    blog1_main: './src/20210124-blog/js/blog.js'
   },
   mode: "development",
   devtool: "source-map",
@@ -78,13 +78,6 @@ module.exports = {
               name: './img/[name].[ext]',
             }
           },
-          // {
-          //   loader: 'url-loader',
-          //   options: {
-          //     limit: 1000,
-          //     name: './img/[name].[ext]',
-          //   }
-          // },
         ]
       },
       // Babel ローダー
@@ -134,12 +127,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/20210124-blog/html/index.html",
       filename: "20210124-blog.html",
-      chunks: ['blog']
+      chunks: ['blog1']
     }),
     new HtmlWebpackPlugin({
       template: "./src/20210124-blog/html/blog.html",
-      filename: "blog.html",
-      chunks: ['blogmain']
+      filename: "20210124-blog-main.html",
+      chunks: ['blog1_main']
     }),
     new MiniCssExtractPlugin({
       filename:'css/[name].css'

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/20210124-blog/js/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/20210124-blog/js/blog.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -100,10 +100,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/20210124-blog/js/index.js":
-/*!***************************************!*\
-  !*** ./src/20210124-blog/js/index.js ***!
-  \***************************************/
+/***/ "./src/20210124-blog/js/blog.js":
+/*!**************************************!*\
+  !*** ./src/20210124-blog/js/blog.js ***!
+  \**************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -115,4 +115,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 /******/ });
-//# sourceMappingURL=blog.js.map
+//# sourceMappingURL=blog1_main.js.map

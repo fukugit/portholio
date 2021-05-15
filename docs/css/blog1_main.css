@@ -96,7 +96,6 @@ body main .contanor article.blog {
 }
 body main .contanor article.blog .content {
   margin: 0 10px 10px 10px;
-  border: 1.5px #ea7070 solid;
   background-color: #f6f6e9;
 }
 body main .contanor article.blog .content .top {
@@ -174,8 +173,8 @@ body main .contanor article.index {
 }
 body main .contanor article.index .content {
   margin: 0 10px 10px 10px;
-  border: 1.5px #ea7070 solid;
   background-color: #f6f6e9;
+  padding-bottom: 30px;
 }
 body main .contanor article.index .content .top {
   position: relative;
@@ -384,4 +383,4 @@ body footer {
   }
 }
 
-/*# sourceMappingURL=blogmain.css.map*/
+/*# sourceMappingURL=blog1_main.css.map*/

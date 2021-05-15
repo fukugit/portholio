@@ -103,7 +103,6 @@ body{
         }
         .content {
           margin: 0 10px 10px 10px;
-          border: 1.5px $color-accent solid;
           background-color: $color-main;
           .top {
             position: relative;
@@ -178,8 +177,8 @@ body{
         }
         .content {
           margin: 0 10px 10px 10px;
-          border: 1.5px $color-accent solid;
           background-color: $color-main;
+          padding-bottom: 30px;
           .top {
             position: relative;
             padding: 4px;
