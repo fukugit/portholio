@@ -8,10 +8,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/top/js/index.js',
-    manga: './src/20210117-manga/js/index.js',
-    coffeeshop: './src/20210118-coffeeshop/js/index.js',
-    blog1: './src/20210124-blog/js/index.js',
-    blog1_main: './src/20210124-blog/js/blog.js'
+    top2: './src/top2/js/index.js'
   },
   mode: "development",
   devtool: "source-map",
@@ -97,15 +94,15 @@ module.exports = {
         exclude: /node_modules/,
       },
       // ESLint
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader",
-        options: {
-          fix: false,
-          failOnError: true,
-        }
-      },
+      // {
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   loader: "eslint-loader",
+      //   options: {
+      //     fix: false,
+      //     failOnError: true,
+      //   }
+      // },
     ]
   },
   plugins: [
@@ -115,24 +112,9 @@ module.exports = {
       chunks: ['index']
     }),
     new HtmlWebpackPlugin({
-      template: "./src/20210117-manga/html/index.html",
-      filename: "20210117-manga.html",
-      chunks: ['manga']
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/20210118-coffeeshop/html/index.html",
-      filename: "20210118-coffeeshop.html",
-      chunks: ['coffeeshop']
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/20210124-blog/html/index.html",
-      filename: "20210124-blog.html",
-      chunks: ['blog1']
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/20210124-blog/html/blog.html",
-      filename: "20210124-blog-main.html",
-      chunks: ['blog1_main']
+      template: "./src/top2/html/index.html", // 元HTML
+      filename: "top2.html",  // 出力先HTML
+      chunks: ['top2']
     }),
     new MiniCssExtractPlugin({
       filename:'css/[name].css'
