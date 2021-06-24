@@ -1,7 +1,3 @@
-@import "~animate.css";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Sacramento&display=swap');
-
-
 /* 
   配色はこちらを参照
   https://colordrop.io/color/17935
@@ -15,22 +11,6 @@ $color-footer: #306b92;
 // $pc: 1024px; // PC
 $tab: 799px; // タブレット
 // $sp: 480px;  // スマホ
-
-// @mixin pc {
-//   @media (max-width: ($pc)) {
-//     @content;
-//   }
-// }
-@mixin tab {
-  @media (max-width: ($tab)) {
-    @content;
-  }
-}
-// @mixin sp {
-//   @media (max-width: ($sp)) {
-//     @content;
-//   }
-// }
 
 body{
   margin: 0;
@@ -48,7 +28,7 @@ body{
       .inner-content {
         margin: 1500px auto;
         width: 100%;
-        height: 5500px;
+        height: 2000px;
         // background-color: yellow;
         section {
           position: relative;
@@ -68,6 +48,26 @@ body{
             background: rgb(52, 156, 52);
             opacity: 1.0;
           }
+          #box-hugo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 600px;
+            height: 600px;
+            padding: 10px;
+            background: skyblue;
+            opacity: 1.0;
+          }
+          #box-sns {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 600px;
+            height: 600px;
+            padding: 10px;
+            background: mediumvioletred;
+            opacity: 1.0;
+          }
         }
       }
     }
@@ -75,7 +75,7 @@ body{
       width: 50%;
       background-color: #f6f6e9;
       position: relative;
-      .inner-content {
+      .self‐introduction {
         position: sticky;
         top: 0;
         width: 100px;
@@ -84,133 +84,6 @@ body{
       }
     }
   }
-
-  header {
-    background-color: $color-second;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    .title {
-      width: 100%;
-      height: 200px;
-      color: $color-font;
-      font-family: 'Noto Serif', serif;
-      font-size: 3em;
-      text-align: center;
-      line-height: 200px;
-      animation-name: title-animation;
-      animation-duration: 1s;
-      animation-delay: 0s;
-      animation-iteration-count: 1;
-
-      @include tab {
-        width: 100%;
-        height: 200px;
-        color: $color-font;
-        font-family: 'Noto Serif', serif;
-        font-size: 2em;
-        text-align: center;
-        line-height: 200px;
-        animation: none;
-      };
-    }
-    @keyframes title-animation {
-      0% {
-        font-size: 3.3em;
-      }
-      20% {
-        font-size: 3.5em;
-      }
-      30% {
-        font-size: 4em;
-      }
-      60% {
-        font-size: 5em;
-      }
-      100% {
-        font-size: 3em;
-      }
-    }
-
-  } /* header */
-
-  footer {
-    width: 100%;
-    background-color: $color-second;
-    bottom: 0; /*下に固定*/
-    height: 200px;
-    .contanor {
-      margin: 30px auto 0;
-      display: flex;
-      justify-content: space-between;
-      width: 800px;
-      background-color: $color-footer;
-      animation-name: footer-animation;
-      animation-duration: 1s;
-      animation-delay: 1s;
-      animation-iteration-count: 1;
-      opacity: 0;
-      animation-fill-mode: forwards;
-      @include tab {
-        display: block;
-        width: 100%;
-        height: auto;
-        animation: none;
-        opacity: 1.0;
-      };
-      .explain {
-        width: 400px;
-        margin-top: 20px;
-        margin-left: 30px;
-        margin-bottom: 10px;
-        padding: 10px;
-        box-sizing: border-box;
-        background-color: $color-font;
-        @include tab {
-          margin: 0;
-          width: 100%;
-          animation: none;
-          opacity: 1.0;
-        };
-      }
-      .sosial{
-        width: 300px;
-        // height: 200px;
-        margin-top: 20px;
-        margin-left: 10px;
-        margin-right: 20px;
-        display: flex;
-        justify-content: flex-end;
-        @include tab {
-          width: 100%;
-          height: auto;
-          margin-left: 0;
-          margin-right: 0;
-          justify-content: flex-start;
-        };
-
-        .box {
-          margin-right: 10px;
-          width: 45px;
-
-          img {
-            width: 45px;    /* 横幅を割合で指定 */
-            height: auto;  /* 高さは自動指定 */
-          }
-        }
-      }
-    }
-    @keyframes footer-animation {
-      0% {
-        opacity: 0.0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-  } /* footer */
-
 
 }
 
