@@ -25,6 +25,18 @@ body{
     .left-content {
       width: 50%;
       background-color: #fd5f00;
+      position: relative;
+      .cloud {
+        position: sticky;
+        top: 900px;
+        left: 35%;
+        background-image: url(../img/cloud.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 200px;
+        height: 200px;
+        transform: rotateZ(50deg);
+      }
       .inner-content {
         margin: 1500px auto;
         width: 100%;
@@ -38,14 +50,18 @@ body{
           display: flex;
           justify-content: center;
           align-items: center;
-          #box-introduction {
+          .balloon {
             position: absolute;
             top: 0;
             left: 0;
-            width: 600px;
-            height: 600px;
-            padding: 10px;
-            background: rgb(52, 156, 52);
+            width: 800px;
+            height: 700px;
+            background-image: url(../img/balloon.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            transform: rotateY(20deg);
+          }
+          #box-introduction {
             opacity: 1.0;
           }
           #box-hugo {
