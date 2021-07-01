@@ -4,19 +4,22 @@ import '../css/style.scss';
 // But I have no idea why it is neccesry to use image file in sass.  
 import '../img/balloon.png'
 import '../img/cloud.png'
+import '../img/wind.png'
 
 const introduction = document.getElementById('box-introduction');
 const hugo = document.getElementById('box-hugo');
 const sns = document.getElementById('box-sns');
 window.addEventListener('scroll', function () {
-  scrollRotate('cloud');
+  scrollRotate('wind1', 2);
+  scrollRotate('wind2', 1);
+  scrollRotate('wind3', 3);
   const value = window.scrollY;
   introduction.style.left = value * 0.2 + 'px';
   hugo.style.left = (value - 3500) * 0.3 + 'px';
   sns.style.left = (value - 3500 * 2) * 0.3 + 'px';
 });
 
-function scrollRotate(id) {
+function scrollRotate(id, rotateValue) {
   let image = document.getElementById(id);
-  image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+  image.style.transform = "rotate(" + window.pageYOffset/rotateValue + "deg)";
 }
