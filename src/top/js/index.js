@@ -14,9 +14,9 @@ window.addEventListener('scroll', function () {
   scrollRotate('wind2', 1);
   scrollRotate('wind3', 3);
   const value = window.scrollY;
-  introduction.style.left = value * 0.2 + 'px';
-  hugo.style.left = (value - 3500) * 0.3 + 'px';
-  sns.style.left = (value - 3500 * 2) * 0.3 + 'px';
+  introduction.style.left = (value - 1200) * 0.3 + 'px';
+  hugo.style.left = (value - 2700) * 0.3 + 'px';
+  sns.style.left = (value - 2200 * 2) * 0.3 + 'px';
 });
 
 function scrollRotate(id, rotateValue) {
