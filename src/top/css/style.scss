@@ -8,9 +8,10 @@ $color-accent: #fd5f00;
 $color-font:#f6f6e9;
 $color-footer: #306b92;
 
-// $pc: 1024px; // PC
+$pc: 1024px; // PC
 $tab: 799px; // タブレット
 // $sp: 480px;  // スマホ
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wdth,wght@106.8,743&display=swap');
 
 body{
   margin: 0;
@@ -19,29 +20,65 @@ body{
   justify-content: center;
 
   .container {
-    width: 1000px;
-    min-height: 100vh;
+    width: $pc;
     display: flex;
     flex-direction: column;
     background-color: #FFF;
 
     .first-content {
       width: 100%;
+      height: 100vh;
       background-color: #f6f6e9;
-      position: relative;
-      .self‐introduction {
-        position: sticky;
-        top: 0;
+      padding-top: 100px;
+      display: flex;
+      flex-direction: column;
+      .self‐introduction-top {
         width: 100%;
-        height: 100vh;
         .top-tile {
-          padding-top: 200px;
-          padding-left: 150px;
           font-size: 3rem;
+          font-family: 'Tourney', cursive;
+        }
+        .top-tile-sub {
+          font-size: 2rem;
+        }
+      }
+      .self‐introduction-detail {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 200px;
+        .top-scrollme {
+          position: relative;
+          background-color: #fd5f00;
+          font-size: 1rem;
+          .top-balloon {
+            position: absolute;
+            top: 0;
+            background-image: url(../img/balloon-top.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 200px;
+            height: 200px;
+            z-index: 1;
+            .top-balloon-comment {
+              position: absolute;
+              top: 65px;
+              left: 50px;
+            }
+          }
+          .top-cloud {
+            position: absolute;
+            top: 95px;
+            left: 50px;
+            background-image: url(../img/cloud-top.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 200px;
+            height: 200px;
+          }
         }
         .top-introduce {
-          padding-top: 300px;
-          padding-left: 500px;
+          background-color: red;
           font-size: 1.2rem;
         }
       }

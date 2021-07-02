@@ -4,6 +4,8 @@ import '../css/style.scss';
 // But I have no idea why it is neccesry to use image file in sass.  
 import '../img/balloon.png'
 import '../img/cloud.png'
+import '../img/balloon-top.png'
+import '../img/cloud-top.png'
 import '../img/wind.png'
 
 const introduction = document.getElementById('box-introduction');
