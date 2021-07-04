@@ -7,6 +7,9 @@ import '../img/cloud.png'
 import '../img/balloon-top.png'
 import '../img/cloud-top.png'
 import '../img/wind.png'
+import '../img/icon-github.png'
+import '../img/icon-twitter.png'
+import '../img/icon-comments.png'
 
 const introduction = document.getElementById('box-introduction');
 const hugo = document.getElementById('box-hugo');

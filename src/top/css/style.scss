@@ -35,51 +35,98 @@ body{
       .self‐introduction-top {
         width: 100%;
         .top-tile {
-          font-size: 3rem;
+          width: 100%;
+          font-size: 2.8rem;
           font-family: 'Tourney', cursive;
         }
         .top-tile-sub {
+          width: 100%;
           font-size: 2rem;
+        }
+        .top-sns-container {
+          margin-top: 30px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          .top-sns-comments {
+            display: flex;
+            justify-content: flex-end;
+            .top-sns-comment {
+              font-size: 1rem;
+              width: 280px;
+            }
+          }
+          .top-sns-layouts {
+            margin-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+            .top-sns-layout {
+              width: 400px;
+              display: flex;
+              justify-content: flex-end;
+              .top-sns-twitter {
+                background-image: url(../img/icon-twitter.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+              }
+              .top-sns-github {
+                background-image: url(../img/icon-github.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+              }
+              .top-sns-codepen {
+                background-image: url(../img/icon-comments.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 30px;
+                height: 30px;
+                font-size: 1px;
+              }
+            }
+          }
         }
       }
       .self‐introduction-detail {
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        padding-top: 200px;
+        justify-content: center;
+        padding-top: 100px;
         .top-scrollme {
           position: relative;
-          background-color: #fd5f00;
           font-size: 1rem;
+          width: 700px;
           .top-balloon {
             position: absolute;
             top: 0;
             background-image: url(../img/balloon-top.png);
             background-repeat: no-repeat;
             background-size: contain;
-            width: 200px;
-            height: 200px;
+            width: 600px;
+            height: 500px;
             z-index: 1;
             .top-balloon-comment {
               position: absolute;
-              top: 65px;
-              left: 50px;
+              width: 350px;
+              top: 150px;
+              left: 130px;
             }
           }
           .top-cloud {
             position: absolute;
-            top: 95px;
-            left: 50px;
+            top: 430px;
+            left: 320px;
             background-image: url(../img/cloud-top.png);
             background-repeat: no-repeat;
             background-size: contain;
-            width: 200px;
-            height: 200px;
+            width: 100px;
+            height: 100px;
           }
-        }
-        .top-introduce {
-          background-color: red;
-          font-size: 1.2rem;
         }
       }
     }
