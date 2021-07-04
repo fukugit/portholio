@@ -64,20 +64,21 @@ body{
               width: 400px;
               display: flex;
               justify-content: flex-end;
+              align-items: center;
               .top-sns-twitter {
                 background-image: url(../img/icon-twitter.png);
                 background-repeat: no-repeat;
                 background-size: contain;
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
                 margin-right: 10px;
               }
               .top-sns-github {
                 background-image: url(../img/icon-github.png);
                 background-repeat: no-repeat;
                 background-size: contain;
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
                 margin-right: 10px;
               }
               .top-sns-codepen {
