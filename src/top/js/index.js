@@ -9,7 +9,7 @@ import '../img/cloud-top.png'
 import '../img/wind.png'
 import '../img/icon-github.png'
 import '../img/icon-twitter.png'
-import '../img/icon-comments.png'
+import '../img/icon-codepen.png'
 
 const introduction = document.getElementById('box-introduction');
 const hugo = document.getElementById('box-hugo');
