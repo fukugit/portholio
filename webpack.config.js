@@ -8,6 +8,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/top/js/index.js',
+    trip: './src/trip/js/index.js',
     top2: './src/top2/js/index.js'
   },
   mode: "development",
@@ -110,6 +111,11 @@ module.exports = {
       template: "./src/top/html/index.html", // 元HTML
       filename: "index.html",  // 出力先HTML
       chunks: ['index']
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/trip/html/index.html", // 元HTML
+      filename: "trip.html",  // 出力先HTML
+      chunks: ['trip']
     }),
     new HtmlWebpackPlugin({
       template: "./src/top2/html/index.html", // 元HTML

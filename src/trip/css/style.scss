@@ -1,0 +1,258 @@
+/* 
+  配色はこちらを参照
+  https://colordrop.io/color/17935
+ */
+$color-base:#13334c;
+$color-second: #005792;
+$color-accent: #fd5f00;
+$color-font:#f6f6e9;
+$color-footer: #306b92;
+
+$pc: 1024px; // PC
+$tab: 799px; // タブレット
+// $sp: 480px;  // スマホ
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wdth,wght@106.8,743&display=swap');
+
+body{
+  margin: 0;
+  background-color: #f6f6e9;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    section {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      scroll-snap-align: center;
+      .one {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: red;
+      }
+      .two {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: yellow;
+      }
+      .three {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: green;
+      }
+    }
+  }
+
+
+
+  // .container {
+  //   width: $pc;
+  //   display: flex;
+  //   flex-direction: column;
+  //   background-color: #FFF;
+
+  //   .first-content {
+  //     width: 100%;
+  //     height: 100vh;
+  //     background-color: #f6f6e9;
+  //     padding-top: 100px;
+  //     display: flex;
+  //     flex-direction: column;
+  //     .self‐introduction-top {
+  //       width: 100%;
+  //       .top-tile {
+  //         width: 100%;
+  //         font-size: 2.8rem;
+  //         font-family: 'Tourney', cursive;
+  //       }
+  //       .top-tile-sub {
+  //         width: 100%;
+  //         font-size: 2rem;
+  //       }
+  //       .top-sns-container {
+  //         margin-top: 30px;
+  //         width: 100%;
+  //         display: flex;
+  //         flex-direction: column;
+  //         .top-sns-comments {
+  //           display: flex;
+  //           justify-content: flex-end;
+  //           .top-sns-comment {
+  //             font-size: 1rem;
+  //             width: 280px;
+  //           }
+  //         }
+  //         .top-sns-layouts {
+  //           margin-top: 10px;
+  //           display: flex;
+  //           justify-content: flex-end;
+  //           .top-sns-layout {
+  //             width: 400px;
+  //             display: flex;
+  //             justify-content: flex-end;
+  //             align-items: center;
+  //             .top-sns-twitter {
+  //               background-image: url(../img/icon-twitter.png);
+  //               background-repeat: no-repeat;
+  //               background-size: contain;
+  //               width: 30px;
+  //               height: 30px;
+  //               margin-right: 10px;
+  //             }
+  //             .top-sns-github {
+  //               background-image: url(../img/icon-github.png);
+  //               background-repeat: no-repeat;
+  //               background-size: contain;
+  //               width: 30px;
+  //               height: 30px;
+  //               margin-right: 10px;
+  //             }
+  //             .top-sns-codepen {
+  //               background-image: url(../img/icon-codepen.png);
+  //               background-repeat: no-repeat;
+  //               background-size: contain;
+  //               width: 40px;
+  //               height: 40px;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //     .self‐introduction-detail {
+  //       width: 100%;
+  //       display: flex;
+  //       justify-content: center;
+  //       padding-top: 100px;
+  //       .top-scrollme {
+  //         position: relative;
+  //         font-size: 1rem;
+  //         width: 700px;
+  //         .top-balloon {
+  //           position: absolute;
+  //           top: 0;
+  //           background-image: url(../img/balloon-top.png);
+  //           background-repeat: no-repeat;
+  //           background-size: contain;
+  //           width: 600px;
+  //           height: 500px;
+  //           z-index: 1;
+  //           .top-balloon-comment {
+  //             position: absolute;
+  //             width: 350px;
+  //             top: 150px;
+  //             left: 130px;
+  //           }
+  //         }
+  //         .top-cloud {
+  //           position: absolute;
+  //           top: 430px;
+  //           left: 320px;
+  //           background-image: url(../img/cloud-top.png);
+  //           background-repeat: no-repeat;
+  //           background-size: contain;
+  //           width: 100px;
+  //           height: 100px;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .second-content {
+  //     width: 100%;
+  //     background-color: #f6f6e9;
+  //     position: relative;
+  //     #cloud {
+  //       position: sticky;
+  //       top: 900px;
+  //       left: 80rem;
+  //       background-image: url(../img/cloud.png);
+  //       background-repeat: no-repeat;
+  //       background-size: contain;
+  //       width: 200px;
+  //       height: 200px;
+  //       transform: rotateZ(40deg);
+  //     }
+  //     #wind1{
+  //       position: sticky;
+  //       top: 850px;
+  //       left: 78rem;
+  //       background-image: url(../img/wind.png);
+  //       background-repeat: no-repeat;
+  //       background-size: contain;
+  //       width: 100px;
+  //       height: 100px;
+  //       transform: rotateZ(180deg);
+  //     }
+  //     #wind2 {
+  //       position: sticky;
+  //       top: 850px;
+  //       left: 76rem;
+  //       background-image: url(../img/wind.png);
+  //       background-repeat: no-repeat;
+  //       background-size: contain;
+  //       width: 50px;
+  //       height: 50px;
+  //       transform: rotateZ(90deg);
+  //     }
+  //     #wind3 {
+  //       position: sticky;
+  //       top: 910px;
+  //       left: 72rem;
+  //       background-image: url(../img/wind.png);
+  //       background-repeat: no-repeat;
+  //       background-size: contain;
+  //       width: 150px;
+  //       height: 150px;
+  //       transform: rotateZ(50deg);
+  //     }
+  //     .inner-content {
+  //       margin: 100px auto;
+  //       width: 100%;
+  //       height: 1500px;
+  //       section {
+  //         position: relative;
+  //         width: 100%;
+  //         height: 100%;
+  //         overflow: hidden;
+  //         display: flex;
+  //         justify-content: center;
+  //         align-items: center;
+  //         .balloon {
+  //           width: 800px;
+  //           height: 700px;
+  //           background-image: url(../img/balloon.png);
+  //           background-repeat: no-repeat;
+  //           background-size: contain;
+  //           transform: rotateY(20deg);
+  //         }
+  //         #box-introduction {
+  //           position: absolute;
+  //           top: 0;
+  //           left: 0;
+  //           opacity: 1.0;
+  //         }
+  //         #box-hugo {
+  //           position: absolute;
+  //           top: 0;
+  //           left: 0;
+  //           opacity: 1.0;
+  //         }
+  //         #box-sns {
+  //           position: absolute;
+  //           top: 0;
+  //           left: 0;
+  //           opacity: 1.0;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
+
