@@ -1,3 +1,5 @@
+@import "~animate.css";
+
 /* 
   配色はこちらを参照
   https://colordrop.io/color/17935
@@ -12,8 +14,10 @@ $pc: 1024px; // PC
 $tab: 799px; // タブレット
 // $sp: 480px;  // スマホ
 @import url('https://fonts.googleapis.com/css2?family=Tourney:wdth,wght@106.8,743&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 body{
+  font-family: 'PT Sans', sans-serif;
   margin: 0;
   background-color: #f6f6e9;
   display: flex;
@@ -38,16 +42,29 @@ body{
           width: 100%;
           font-size: 2.8rem;
           font-family: 'Tourney', cursive;
+          animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
+          animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
         }
         .top-tile-sub {
+          margin-top: 20px;
           width: 100%;
-          font-size: 2rem;
+          font-size: 1.2rem;
+          animation: fadeInRight; /* That fadeInLeft of @keyframe is declared in animate.css. */
+          animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
+          animation-delay: 0.3s;
+          opacity: 0;
+          animation-fill-mode: forwards;
         }
         .top-sns-container {
           margin-top: 30px;
           width: 100%;
           display: flex;
           flex-direction: column;
+          animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
+          animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
+          animation-delay: 0.4s;
+          opacity: 0;
+          animation-fill-mode: forwards;
           .top-sns-comments {
             display: flex;
             justify-content: flex-end;
@@ -73,6 +90,12 @@ body{
                 height: 30px;
                 margin-right: 10px;
               }
+              .top-sns-twitter:hover {
+                cursor: pointer;
+                animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
+                animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
+                animation-iteration-count: infinite;
+              }
               .top-sns-github {
                 background-image: url(../img/icon-github.png);
                 background-repeat: no-repeat;
@@ -81,12 +104,24 @@ body{
                 height: 30px;
                 margin-right: 10px;
               }
+              .top-sns-github:hover {
+                cursor: pointer;
+                animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
+                animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
+                animation-iteration-count: infinite;
+              }
               .top-sns-codepen {
                 background-image: url(../img/icon-codepen.png);
                 background-repeat: no-repeat;
                 background-size: contain;
                 width: 40px;
                 height: 40px;
+              }
+              .top-sns-codepen:hover {
+                cursor: pointer;
+                animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
+                animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
+                animation-iteration-count: infinite;
               }
             }
           }
@@ -97,6 +132,11 @@ body{
         display: flex;
         justify-content: center;
         padding-top: 100px;
+        animation: fadeInUp; /* That fadeInLeft of @keyframe is declared in animate.css. */
+        animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
+        animation-delay: 0.5s;
+        opacity: 0;
+        animation-fill-mode: forwards;
         .top-scrollme {
           position: relative;
           font-size: 1rem;
@@ -110,6 +150,9 @@ body{
             width: 600px;
             height: 500px;
             z-index: 1;
+            animation: pulse; /* That fadeInLeft of @keyframe is declared in animate.css. */
+            animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
+            animation-iteration-count: infinite;
             .top-balloon-comment {
               position: absolute;
               width: 350px;
