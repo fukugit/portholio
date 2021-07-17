@@ -13,7 +13,7 @@ import '../img/icon-codepen.png'
 
 const introduction = document.getElementById('box-introduction');
 const hugo = document.getElementById('box-hugo');
-const sns = document.getElementById('box-sns');
+const sns = document.getElementById('box-css');
 window.addEventListener('scroll', function () {
   scrollRotate('wind1', 2);
   scrollRotate('wind2', 1);
