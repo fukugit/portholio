@@ -8,8 +8,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/top/js/index.js',
-    trip: './src/trip/js/index.js',
-    top2: './src/top2/js/index.js'
+    trip: './src/trip/js/index.js'
   },
   mode: "development",
   devtool: "source-map",
@@ -116,11 +115,6 @@ module.exports = {
       template: "./src/trip/html/index.html", // 元HTML
       filename: "trip.html",  // 出力先HTML
       chunks: ['trip']
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/top2/html/index.html", // 元HTML
-      filename: "top2.html",  // 出力先HTML
-      chunks: ['top2']
     }),
     new MiniCssExtractPlugin({
       filename:'css/[name].css'
