@@ -14,7 +14,9 @@ import '../img/icon-codepen.png'
 const introduction = document.getElementById('box-introduction');
 const hugo = document.getElementById('box-hugo');
 const css = document.getElementById('box-css');
+const backend = document.getElementById('box-backend');
 const enjoy = document.getElementById('box-enjoy');
+const acknowledgement = document.getElementById('box-acknowledgement');
 window.addEventListener('scroll', function () {
   scrollRotate('wind1', 2);
   scrollRotate('wind2', 1);
@@ -23,7 +25,9 @@ window.addEventListener('scroll', function () {
   introduction.style.left = (value - 1200) * 0.3 + 'px';
   hugo.style.left = (value - 2700) * 0.3 + 'px';
   css.style.left = (value - 2200 * 2) * 0.3 + 'px';
-  enjoy.style.left = (value - 2000 * 3) * 0.3 + 'px';
+  backend.style.left = (value - 2000 * 3) * 0.3 + 'px';
+  enjoy.style.left = (value - 1900 * 4) * 0.3 + 'px';
+  acknowledgement.style.left = (value - 1850 * 5) * 0.3 + 'px';
 });
 
 function scrollRotate(id, rotateValue) {

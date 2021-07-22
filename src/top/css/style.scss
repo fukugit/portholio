@@ -25,12 +25,10 @@ body{
   background-color: #f6f6e9;
   display: flex;
   justify-content: center;
-
   .container {
     width: $pc;
     display: flex;
     flex-direction: column;
-
     .first-content {
       width: 100%;
       height: 100vh;
@@ -133,7 +131,7 @@ body{
         width: 100%;
         display: flex;
         justify-content: center;
-        padding-top: 100px;
+        padding-top: 50px;
         animation: fadeInUp; /* That fadeInLeft of @keyframe is declared in animate.css. */
         animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
         animation-delay: 0.5s;
@@ -185,8 +183,8 @@ body{
       position: relative;
       #cloud {
         position: sticky;
-        top: 900px;
-        left: 80rem;
+        top: 80%;
+        left: 70%;
         background-image: url(../img/cloud.png);
         background-repeat: no-repeat;
         background-size: contain;
@@ -196,8 +194,8 @@ body{
       }
       #wind1{
         position: sticky;
-        top: 850px;
-        left: 78rem;
+        top: 75%;
+        left: 65%;
         background-image: url(../img/wind.png);
         background-repeat: no-repeat;
         background-size: contain;
@@ -207,8 +205,8 @@ body{
       }
       #wind2 {
         position: sticky;
-        top: 850px;
-        left: 76rem;
+        top: 75%;
+        left: 60%;
         background-image: url(../img/wind.png);
         background-repeat: no-repeat;
         background-size: contain;
@@ -218,8 +216,8 @@ body{
       }
       #wind3 {
         position: sticky;
-        top: 910px;
-        left: 72rem;
+        top: 81%;
+        left: 57%;
         background-image: url(../img/wind.png);
         background-repeat: no-repeat;
         background-size: contain;
@@ -314,14 +312,78 @@ body{
               }
             }
           }
-
+          #box-backend {
+            position: absolute;
+            top: 0;
+            left: 0;
+            #balloon-backend {
+              position: absolute;
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .balloon-comment-title {
+                font-size: 3rem;
+                color: $color-strong;
+                font-family: 'Caveat', cursive, sans-serif;
+              }
+              .balloon-comment-detail {
+                margin-top: 20px;
+                width: 60%;
+                overflow-wrap: break-word;
+              }
+            }
+          }
           #box-enjoy {
             position: absolute;
             top: 0;
             left: 0;
+            #balloon-enjoy {
+              position: absolute;
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .balloon-comment-title {
+                font-size: 3rem;
+                color: $color-strong;
+                font-family: 'Caveat', cursive, sans-serif;
+              }
+              .balloon-comment-detail {
+                margin-top: 20px;
+                width: 60%;
+                overflow-wrap: break-word;
+              }
+            }
           }
-
-
+          #box-acknowledgement {
+            position: absolute;
+            top: 0;
+            left: 0;
+            #balloon-acknowledgement {
+              position: absolute;
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .balloon-comment-title {
+                font-size: 3rem;
+                color: $color-strong;
+                font-family: 'Caveat', cursive, sans-serif;
+              }
+              .balloon-comment-detail {
+                margin-top: 20px;
+                width: 60%;
+                overflow-wrap: break-word;
+              }
+            }
+          }
         }
       }
     }
