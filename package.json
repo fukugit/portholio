@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/fukugit/learning-npm#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "animate.css": "^4.1.1",
     "moment": "^2.29.1"
   },

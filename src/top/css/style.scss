@@ -1,5 +1,8 @@
 @import "~animate.css";
-
+// TODO: should be investigate how to work fontawesome on sass.
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
 /* 
   配色はこちらを参照
   https://colordrop.io/color/17935
@@ -45,6 +48,7 @@ body{
           animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
           animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
         }
+
         .top-tile-sub {
           margin-top: 20px;
           width: 100%;
