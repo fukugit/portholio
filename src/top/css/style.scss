@@ -181,50 +181,58 @@ body{
       width: 100%;
       background-color: #f6f6e9;
       position: relative;
-      #cloud {
+      .cloud-box {
         position: sticky;
-        top: 80%;
-        left: 70%;
-        background-image: url(../img/cloud.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 200px;
-        height: 200px;
-        transform: rotateZ(40deg);
+        top: 70%;
+        left: 100%;
+        width: 400px;
+        height: 250px;
+        #cloud {
+          position: absolute;
+          top: 50px;
+          left: 200px;
+          background-image: url(../img/cloud.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 200px;
+          height: 200px;
+          transform: rotateZ(40deg);
+        }
+        #wind1{
+          position: absolute;
+          top: 10px;
+          left: 150px;
+          background-image: url(../img/wind.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 100px;
+          height: 100px;
+          transform: rotateZ(180deg);
+        }
+        #wind2 {
+          position: absolute;
+          top: 10px;
+          left: 110px;
+          background-image: url(../img/wind.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 50px;
+          height: 50px;
+          transform: rotateZ(90deg);
+        }
+        #wind3 {
+          position: absolute;
+          top: 60px;
+          left: 30px;
+          background-image: url(../img/wind.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 150px;
+          height: 150px;
+          transform: rotateZ(50deg);
+        }
       }
-      #wind1{
-        position: sticky;
-        top: 75%;
-        left: 65%;
-        background-image: url(../img/wind.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 100px;
-        height: 100px;
-        transform: rotateZ(180deg);
-      }
-      #wind2 {
-        position: sticky;
-        top: 75%;
-        left: 60%;
-        background-image: url(../img/wind.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 50px;
-        height: 50px;
-        transform: rotateZ(90deg);
-      }
-      #wind3 {
-        position: sticky;
-        top: 81%;
-        left: 57%;
-        background-image: url(../img/wind.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 150px;
-        height: 150px;
-        transform: rotateZ(50deg);
-      }
+
       .inner-content {
         margin: 100px auto;
         width: 100%;
