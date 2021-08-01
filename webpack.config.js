@@ -39,6 +39,17 @@ module.exports = {
           }
         }
       },
+      // Font
+      {
+        test: /\.(ttf|eot|woff|woff2|svg)$/,
+        use: [{
+            loader: 'file-loader',
+            options: {
+                name: "[name].[ext]",
+                outputPath: './webfonts',
+            }
+        }]
+      },
       // sass ローダー
       {
         test: /\.scss$/,
@@ -93,6 +104,7 @@ module.exports = {
         ],
         exclude: /node_modules/,
       },
+
       // ESLint
       // {
       //   test: /\.js$/,

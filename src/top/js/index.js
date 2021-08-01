@@ -11,9 +11,10 @@ import '../img/icon-github.png'
 import '../img/icon-twitter.png'
 import '../img/icon-codepen.png'
 
-// import '@fortawesome/fontawesome-free/js/fontawesome';
-// import '@fortawesome/fontawesome-free/js/solid';
-// import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
 
 const introduction = document.getElementById('box-introduction');
 const hugo = document.getElementById('box-hugo');

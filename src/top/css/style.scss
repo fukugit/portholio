@@ -1,8 +1,15 @@
 @import "~animate.css";
+
+// font-awesome
 // TODO: should be investigate how to work fontawesome on sass.
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import '~@fortawesome/fontawesome-free/scss/solid.scss'; //Solid (塗り)
+@import '~@fortawesome/fontawesome-free/scss/regular.scss'; //ロゴ等
+// $fa-font-path: '../webfonts';
+
+
+
 /* 
   配色はこちらを参照
   https://colordrop.io/color/17935
@@ -48,7 +55,20 @@ body{
           animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
           animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
         }
-
+        .user2 {
+          @include fa-icon;
+          @extend .fas;
+          &:before {
+            content: fa-content($fa-var-user);
+            margin-right: .5rem;
+          }
+        }
+        .user::before {
+          font-family: "Font Awesome 5 Free";
+          margin-right: .5rem;
+          font-weight: 900; // regular のアイコンフォントなら 400
+          content: "\f007";
+        }
         .top-tile-sub {
           margin-top: 20px;
           width: 100%;
