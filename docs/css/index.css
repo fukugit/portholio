@@ -12217,7 +12217,7 @@ body .container .first-content .self‐introduction-top .user2 {
 }
 
 @font-face {
-  font-family: "Custome Font Awesome 5 Free";
+  font-family: "Custome Font Awesome 5 Free Regular 400";
   src: url("../webfonts/fa-regular-400.ttf");
 }
 /* 
@@ -12256,6 +12256,12 @@ body .container .first-content .self‐introduction-top .top-tile {
   animation-duration: 0.3s;
   /* don't forget to set a duration for above animation. */
 }
+body .container .first-content .self‐introduction-top .user::before {
+  font-family: "Custome Font Awesome 5 Free Regular 400";
+  margin-right: 0.5rem;
+  font-weight: 900;
+  content: "";
+}
 body .container .first-content .self‐introduction-top .user2 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12268,12 +12274,6 @@ body .container .first-content .self‐introduction-top .user2 {
 body .container .first-content .self‐introduction-top .user2:before {
   content: "";
   margin-right: 0.5rem;
-}
-body .container .first-content .self‐introduction-top .user::before {
-  font-family: "Custome Font Awesome 5 Free";
-  margin-right: 0.5rem;
-  font-weight: 900;
-  content: "";
 }
 body .container .first-content .self‐introduction-top .top-tile-sub {
   margin-top: 20px;
