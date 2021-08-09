@@ -65,6 +65,7 @@ body{
           content: "\f007";
         }
         .user2 {
+          font-family: "Custome Font Awesome 5 Free Regular 400";
           @include fa-icon;
           @extend .fas;
           &:before {
