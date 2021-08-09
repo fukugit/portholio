@@ -12217,7 +12217,7 @@ body .container .first-content .self‐introduction-top .user2 {
 }
 
 @font-face {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Custome Font Awesome 5 Free";
   src: url("../webfonts/fa-regular-400.ttf");
 }
 /* 
@@ -12270,7 +12270,7 @@ body .container .first-content .self‐introduction-top .user2:before {
   margin-right: 0.5rem;
 }
 body .container .first-content .self‐introduction-top .user::before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Custome Font Awesome 5 Free";
   margin-right: 0.5rem;
   font-weight: 900;
   content: "";
