@@ -12263,6 +12263,7 @@ body .container .first-content .self‐introduction-top .user::before {
   content: "";
 }
 body .container .first-content .self‐introduction-top .user2 {
+  font-family: "Custome Font Awesome 5 Free Regular 400";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
