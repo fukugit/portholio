@@ -17,6 +17,8 @@ import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 // Webfonts
 import '@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf';
+import '@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf';
+import '@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf';
 
 const introduction = document.getElementById('box-introduction');
 const hugo = document.getElementById('box-hugo');

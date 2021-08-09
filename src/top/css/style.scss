@@ -1,5 +1,4 @@
 @import "~animate.css";
-@import "~@fortawesome/fontawesome-free";
 
 // font-awesome
 // TODO: should be investigate how to work fontawesome on sass.
@@ -8,10 +7,17 @@
 @import '~@fortawesome/fontawesome-free/scss/solid.scss'; //Solid (塗り)
 @import '~@fortawesome/fontawesome-free/scss/regular.scss'; //ロゴ等
 @font-face {
-  font-family: 'Custome Font Awesome 5 Free Regular 400';
+  font-family: 'Font Awesome 5 Free Regular 400';
   src: url('../webfonts/fa-regular-400.ttf');
 }
-
+@font-face {
+  font-family: 'Font Awesome 5 Free Brands 400';
+  src: url('../webfonts/fa-brands-400.ttf');
+}
+@font-face {
+  font-family: 'Font Awesome 5 Free Solid 900';
+  src: url('../webfonts/fa-solid-900.ttf');
+}
 
 /* 
   配色はこちらを参照
@@ -59,17 +65,31 @@ body{
           animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
         }
         .user::before {
-          font-family: "Custome Font Awesome 5 Free Regular 400";
+          font-family: "Font Awesome 5 Free Regular 400", "Font Awesome 5 Free Brands 400", "Font Awesome 5 Free Solid 900";
           margin-right: .5rem;
           font-weight: 900; // regular のアイコンフォントなら 400
           content: "\f007";
         }
+        // 下記は共通でオーバーライドする必要があります。
+        .fas, .fab {
+          font-weight: normal;
+          display: block;
+        }
         .user2 {
-          font-family: "Custome Font Awesome 5 Free Regular 400";
-          @include fa-icon;
+          font-family: "Font Awesome 5 Free Regular 400", "Font Awesome 5 Free Brands 400", "Font Awesome 5 Free Solid 900";
+          @extend %fa-icon;
           @extend .fas;
           &:before {
             content: fa-content($fa-var-user);
+            margin-right: .5rem;
+          }
+        }
+        .user3 {
+          font-family: "Font Awesome 5 Free Regular 400", "Font Awesome 5 Free Brands 400", "Font Awesome 5 Free Solid 900";
+          @extend %fa-icon;
+          @extend .fab;
+          &:before {
+            content: fa-content($fa-var-twitter);
             margin-right: .5rem;
           }
         }
