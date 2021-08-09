@@ -8,7 +8,7 @@
 @import '~@fortawesome/fontawesome-free/scss/solid.scss'; //Solid (塗り)
 @import '~@fortawesome/fontawesome-free/scss/regular.scss'; //ロゴ等
 @font-face {
-  font-family: 'Custome Font Awesome 5 Free';
+  font-family: 'Custome Font Awesome 5 Free Regular 400';
   src: url('../webfonts/fa-regular-400.ttf');
 }
 
@@ -58,6 +58,12 @@ body{
           animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
           animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
         }
+        .user::before {
+          font-family: "Custome Font Awesome 5 Free Regular 400";
+          margin-right: .5rem;
+          font-weight: 900; // regular のアイコンフォントなら 400
+          content: "\f007";
+        }
         .user2 {
           @include fa-icon;
           @extend .fas;
@@ -65,12 +71,6 @@ body{
             content: fa-content($fa-var-user);
             margin-right: .5rem;
           }
-        }
-        .user::before {
-          font-family: "Custome Font Awesome 5 Free";
-          margin-right: .5rem;
-          font-weight: 900; // regular のアイコンフォントなら 400
-          content: "\f007";
         }
         .top-tile-sub {
           margin-top: 20px;
