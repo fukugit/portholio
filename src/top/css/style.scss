@@ -1,4 +1,5 @@
 @import "~animate.css";
+@import "~@fortawesome/fontawesome-free";
 
 // font-awesome
 // TODO: should be investigate how to work fontawesome on sass.
@@ -6,8 +7,10 @@
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 @import '~@fortawesome/fontawesome-free/scss/solid.scss'; //Solid (塗り)
 @import '~@fortawesome/fontawesome-free/scss/regular.scss'; //ロゴ等
-// $fa-font-path: '../webfonts';
-
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  src: url('../webfonts/fa-regular-400.ttf');
+}
 
 
 /* 
