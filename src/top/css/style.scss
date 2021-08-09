@@ -1,237 +1,427 @@
 @import "~animate.css";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Sacramento&display=swap');
+@import "~@fortawesome/fontawesome-free";
+
+// font-awesome
+// TODO: should be investigate how to work fontawesome on sass.
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import '~@fortawesome/fontawesome-free/scss/solid.scss'; //Solid (塗り)
+@import '~@fortawesome/fontawesome-free/scss/regular.scss'; //ロゴ等
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  src: url('../webfonts/fa-regular-400.ttf');
+}
+
 
 /* 
   配色はこちらを参照
   https://colordrop.io/color/17935
  */
-$color-base:#13334c;
-$color-second: #005792;
-$color-accent: #fd5f00;
-$color-font:#f6f6e9;
-$color-footer: #306b92;
+// $color-base:#13334c;
+// $color-second: #005792;
+// $color-accent: #fd5f00;
+// $color-font:#f6f6e9;
+// $color-footer: #306b92;
 
-// $pc: 1024px; // PC
+$color-strong: #EB5591;
+
+$pc: 1024px; // PC
 $tab: 799px; // タブレット
 // $sp: 480px;  // スマホ
-
-// @mixin pc {
-//   @media (max-width: ($pc)) {
-//     @content;
-//   }
-// }
-@mixin tab {
-  @media (max-width: ($tab)) {
-    @content;
-  }
-}
-// @mixin sp {
-//   @media (max-width: ($sp)) {
-//     @content;
-//   }
-// }
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wdth,wght@106.8,743&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 body{
+  font-family: 'PT Sans', sans-serif;
   margin: 0;
-  background-color: $color-base;
-
-  header {
-    background-color: $color-second;
-    width: 100%;
-    margin: 0 auto;
+  background-color: #f6f6e9;
+  display: flex;
+  justify-content: center;
+  .container {
+    width: $pc;
     display: flex;
     flex-direction: column;
-    .title {
+    .first-content {
       width: 100%;
-      height: 200px;
-      color: $color-font;
-      font-family: 'Noto Serif', serif;
-      font-size: 3em;
-      text-align: center;
-      line-height: 200px;
-      animation-name: title-animation;
-      animation-duration: 1s;
-      animation-delay: 0s;
-      animation-iteration-count: 1;
-
-      @include tab {
-        width: 100%;
-        height: 200px;
-        color: $color-font;
-        font-family: 'Noto Serif', serif;
-        font-size: 2em;
-        text-align: center;
-        line-height: 200px;
-        animation: none;
-      };
-    }
-    @keyframes title-animation {
-      0% {
-        font-size: 3.3em;
-      }
-      20% {
-        font-size: 3.5em;
-      }
-      30% {
-        font-size: 4em;
-      }
-      60% {
-        font-size: 5em;
-      }
-      100% {
-        font-size: 3em;
-      }
-    }
-
-  } /* header */
-
-
-  main {
-    max-width: 800px;
-    margin: 20px auto;
-    @include tab {
-      width: 100%;
-    };
-    .contanor {
-      width: 100%;
+      height: 100vh;
+      background-color: #f6f6e9;
+      padding-top: 100px;
       display: flex;
       flex-direction: column;
-      animation-name: box-animation;
-      animation-duration: 1s;
-      animation-delay: 1s;
-      animation-iteration-count: 1;
-      opacity: 0.0;
-      animation-fill-mode: forwards;
-      @include tab {
-        animation: none;
-        opacity: 1.0;
-      };
-    }
-    @keyframes box-animation {
-      0% {
-        opacity: 0.0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px 20px; /* 横、縦 */
-
-      .box {
-        position: relative; /* div全体をリンク化するためです。 */
-        background-color:$color-accent;
-        height: 200px;
-        text-align: center;
-        line-height: 200px;
-        cursor: pointer;
-        border-radius: 3%;
-        @include tab {
-          border-radius: 0;
-        };
-
-        a {
-          position: absolute;
-          top: 0;
-          left: 0;
-          height:100%;
+      .self‐introduction-top {
+        width: 100%;
+        .top-tile {
           width: 100%;
-          text-decoration: none;
-          color: $color-font;
+          font-size: 2.8rem;
+          font-family: 'Tourney', cursive;
+          animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
+          animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
+        }
+        .user2 {
+          @include fa-icon;
+          @extend .fas;
+          &:before {
+            content: fa-content($fa-var-user);
+            margin-right: .5rem;
+          }
+        }
+        .user::before {
+          font-family: "Font Awesome 5 Free";
+          margin-right: .5rem;
+          font-weight: 900; // regular のアイコンフォントなら 400
+          content: "\f007";
+        }
+        .top-tile-sub {
+          margin-top: 20px;
+          width: 100%;
+          font-size: 1.2rem;
+          animation: fadeInRight; /* That fadeInLeft of @keyframe is declared in animate.css. */
+          animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
+          animation-delay: 0.3s;
+          opacity: 0;
+          animation-fill-mode: forwards;
+        }
+        .top-sns-container {
+          margin-top: 30px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
+          animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
+          animation-delay: 0.4s;
+          opacity: 0;
+          animation-fill-mode: forwards;
+          .top-sns-comments {
+            display: flex;
+            justify-content: flex-end;
+            .top-sns-comment {
+              font-size: 1rem;
+              width: 280px;
+            }
+          }
+          .top-sns-layouts {
+            margin-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+            .top-sns-layout {
+              width: 400px;
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              .top-sns-twitter {
+                background-image: url(../img/icon-twitter.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+              }
+              .top-sns-twitter:hover {
+                cursor: pointer;
+                animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
+                animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
+                animation-iteration-count: infinite;
+              }
+              .top-sns-github {
+                background-image: url(../img/icon-github.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+              }
+              .top-sns-github:hover {
+                cursor: pointer;
+                animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
+                animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
+                animation-iteration-count: infinite;
+              }
+              .top-sns-codepen {
+                background-image: url(../img/icon-codepen.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 40px;
+                height: 40px;
+              }
+              .top-sns-codepen:hover {
+                cursor: pointer;
+                animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
+                animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
+                animation-iteration-count: infinite;
+              }
+            }
+          }
         }
       }
-      .box:hover {
-        animation: pulse;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-        opacity: 1.0;
-        @include tab {
-          animation: none;
-        };
-      }
-    }
-  } /* main */
-
-
-  footer {
-    width: 100%;
-    background-color: $color-second;
-    bottom: 0; /*下に固定*/
-    height: 200px;
-    .contanor {
-      margin: 30px auto 0;
-      display: flex;
-      justify-content: space-between;
-      width: 800px;
-      background-color: $color-footer;
-      animation-name: footer-animation;
-      animation-duration: 1s;
-      animation-delay: 1s;
-      animation-iteration-count: 1;
-      opacity: 0;
-      animation-fill-mode: forwards;
-      @include tab {
-        display: block;
+      .self‐introduction-detail {
         width: 100%;
-        height: auto;
-        animation: none;
-        opacity: 1.0;
-      };
-      .explain {
-        width: 400px;
-        margin-top: 20px;
-        margin-left: 30px;
-        margin-bottom: 10px;
-        padding: 10px;
-        box-sizing: border-box;
-        background-color: $color-font;
-        @include tab {
-          margin: 0;
-          width: 100%;
-          animation: none;
-          opacity: 1.0;
-        };
-      }
-      .sosial{
-        width: 300px;
-        // height: 200px;
-        margin-top: 20px;
-        margin-left: 10px;
-        margin-right: 20px;
         display: flex;
-        justify-content: flex-end;
-        @include tab {
-          width: 100%;
-          height: auto;
-          margin-left: 0;
-          margin-right: 0;
-          justify-content: flex-start;
-        };
-
-        .box {
-          margin-right: 10px;
-          width: 45px;
-
-          img {
-            width: 45px;    /* 横幅を割合で指定 */
-            height: auto;  /* 高さは自動指定 */
+        justify-content: center;
+        padding-top: 50px;
+        animation: fadeInUp; /* That fadeInLeft of @keyframe is declared in animate.css. */
+        animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
+        animation-delay: 0.5s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        .top-scrollme {
+          position: relative;
+          font-size: 1rem;
+          width: 700px;
+          .top-balloon {
+            position: absolute;
+            top: 0;
+            background-image: url(../img/balloon-top.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 600px;
+            height: 500px;
+            z-index: 1;
+            animation: pulse; /* That fadeInLeft of @keyframe is declared in animate.css. */
+            animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
+            animation-iteration-count: infinite;
+            .top-balloon-comment {
+              position: absolute;
+              width: 350px;
+              top: 180px;
+              left: 130px;
+              strong {
+                font-size: 1.4rem;
+                color: $color-strong;
+              }
+            }
+          }
+          .top-cloud {
+            position: absolute;
+            top: 430px;
+            left: 320px;
+            background-image: url(../img/cloud-top.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100px;
+            height: 100px;
           }
         }
       }
     }
-    @keyframes footer-animation {
-      0% {
-        opacity: 0.0;
+    .second-content {
+      width: 100%;
+      background-color: #f6f6e9;
+      position: relative;
+      .cloud-box {
+        position: sticky;
+        top: 70%;
+        left: 100%;
+        width: 400px;
+        height: 250px;
+        #cloud {
+          position: absolute;
+          top: 50px;
+          left: 200px;
+          background-image: url(../img/cloud.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 200px;
+          height: 200px;
+          transform: rotateZ(40deg);
+        }
+        #wind1{
+          position: absolute;
+          top: 10px;
+          left: 150px;
+          background-image: url(../img/wind.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 100px;
+          height: 100px;
+          transform: rotateZ(180deg);
+        }
+        #wind2 {
+          position: absolute;
+          top: 10px;
+          left: 110px;
+          background-image: url(../img/wind.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 50px;
+          height: 50px;
+          transform: rotateZ(90deg);
+        }
+        #wind3 {
+          position: absolute;
+          top: 60px;
+          left: 30px;
+          background-image: url(../img/wind.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 150px;
+          height: 150px;
+          transform: rotateZ(50deg);
+        }
       }
-      100% {
-        opacity: 1;
+
+      .inner-content {
+        margin: 100px auto;
+        width: 100%;
+        height: 1500px;
+        section {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .balloon {
+            width: 800px;
+            height: 700px;
+            background-image: url(../img/balloon.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            transform: rotateY(20deg);
+          }
+          #box-introduction {
+            position: absolute;
+            top: 0;
+            left: 0;
+            #balloon-introduction {
+              position: absolute;
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .balloon-comment {
+                font-size: 3rem;
+                color: $color-strong;
+                font-family: 'Caveat', cursive, sans-serif;
+              }
+            }
+          }
+          #box-hugo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            #balloon-hugo {
+              position: absolute;
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .balloon-comment-title {
+                font-size: 3rem;
+                color: $color-strong;
+                font-family: 'Caveat', cursive, sans-serif;
+              }
+              .balloon-comment-detail {
+                margin-top: 20px;
+                width: 60%;
+                overflow-wrap: break-word;
+              }
+            }
+          }
+          #box-css {
+            position: absolute;
+            top: 0;
+            left: 0;
+            #balloon-css {
+              position: absolute;
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .balloon-comment-title {
+                font-size: 3rem;
+                color: $color-strong;
+                font-family: 'Caveat', cursive, sans-serif;
+              }
+              .balloon-comment-detail {
+                margin-top: 20px;
+                width: 60%;
+                overflow-wrap: break-word;
+              }
+            }
+          }
+          #box-backend {
+            position: absolute;
+            top: 0;
+            left: 0;
+            #balloon-backend {
+              position: absolute;
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .balloon-comment-title {
+                font-size: 3rem;
+                color: $color-strong;
+                font-family: 'Caveat', cursive, sans-serif;
+              }
+              .balloon-comment-detail {
+                margin-top: 20px;
+                width: 60%;
+                overflow-wrap: break-word;
+              }
+            }
+          }
+          #box-enjoy {
+            position: absolute;
+            top: 0;
+            left: 0;
+            #balloon-enjoy {
+              position: absolute;
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .balloon-comment-title {
+                font-size: 3rem;
+                color: $color-strong;
+                font-family: 'Caveat', cursive, sans-serif;
+              }
+              .balloon-comment-detail {
+                margin-top: 20px;
+                width: 60%;
+                overflow-wrap: break-word;
+              }
+            }
+          }
+          #box-acknowledgement {
+            position: absolute;
+            top: 0;
+            left: 0;
+            #balloon-acknowledgement {
+              position: absolute;
+              width: 100%;
+              height: 80%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              .balloon-comment-title {
+                font-size: 3rem;
+                color: $color-strong;
+                font-family: 'Caveat', cursive, sans-serif;
+              }
+              .balloon-comment-detail {
+                margin-top: 20px;
+                width: 60%;
+                overflow-wrap: break-word;
+              }
+            }
+          }
+        }
       }
     }
-  } /* footer */
-
-
+  }
 }
 
