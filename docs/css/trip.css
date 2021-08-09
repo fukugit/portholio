@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css2?family=Tourney:wdth,wght@106.8,743&display=swap);
+@charset "UTF-8";
+/* 
+  配色はこちらを参照
+  https://colordrop.io/color/17935
+ */
+body {
+  margin: 0;
+  background-color: #f6f6e9;
+  display: flex;
+  justify-content: center;
+}
+body .container {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+body .container section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+body .container section .one {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: red;
+}
+body .container section .two {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: yellow;
+}
+body .container section .three {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: green;
+}
+
+/*# sourceMappingURL=trip.css.map*/
