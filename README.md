@@ -38,7 +38,7 @@ webpack の学習用リポジトリです。
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Demo
-[デモ](https://fukugit.github.io/learning-webpack/)  
+[デモ](https://github.com/fukugit/portholio/)  
 
 <br>  
 
