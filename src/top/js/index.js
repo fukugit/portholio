@@ -7,9 +7,6 @@ import '../img/cloud.png'
 import '../img/balloon-top.png'
 import '../img/cloud-top.png'
 import '../img/wind.png'
-import '../img/icon-github.png'
-import '../img/icon-twitter.png'
-import '../img/icon-codepen.png'
 
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
