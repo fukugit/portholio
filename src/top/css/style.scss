@@ -2,22 +2,22 @@
 
 // font-awesome
 // TODO: should be investigate how to work fontawesome on sass.
-@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
-@import "~@fortawesome/fontawesome-free/scss/brands.scss";
-@import '~@fortawesome/fontawesome-free/scss/solid.scss'; //Solid (塗り)
-@import '~@fortawesome/fontawesome-free/scss/regular.scss'; //ロゴ等
-@font-face {
-  font-family: 'Font Awesome 5 Free Regular 400';
-  src: url('../webfonts/fa-regular-400.ttf');
-}
-@font-face {
-  font-family: 'Font Awesome 5 Free Brands 400';
-  src: url('../webfonts/fa-brands-400.ttf');
-}
-@font-face {
-  font-family: 'Font Awesome 5 Free Solid 900';
-  src: url('../webfonts/fa-solid-900.ttf');
-}
+// @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "~@fortawesome/fontawesome-free/scss/brands.scss";
+// @import '~@fortawesome/fontawesome-free/scss/solid.scss'; //Solid (塗り)
+// @import '~@fortawesome/fontawesome-free/scss/regular.scss'; //ロゴ等
+// @font-face {
+//   font-family: 'Font Awesome 5 Free Regular 400';
+//   src: url('../webfonts/fa-regular-400.ttf');
+// }
+// @font-face {
+//   font-family: 'Font Awesome 5 Free Brands 400';
+//   src: url('../webfonts/fa-brands-400.ttf');
+// }
+// @font-face {
+//   font-family: 'Font Awesome 5 Free Solid 900';
+//   src: url('../webfonts/fa-solid-900.ttf');
+// }
 
 /* 
   配色はこちらを参照
@@ -64,35 +64,7 @@ body{
           animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
           animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
         }
-        .user::before {
-          font-family: "Font Awesome 5 Free Regular 400", "Font Awesome 5 Free Brands 400", "Font Awesome 5 Free Solid 900";
-          margin-right: .5rem;
-          font-weight: 900; // regular のアイコンフォントなら 400
-          content: "\f007";
-        }
-        // 下記は共通でオーバーライドする必要があります。
-        .fas, .fab {
-          font-weight: normal;
-          display: block;
-        }
-        .user2 {
-          font-family: "Font Awesome 5 Free Regular 400", "Font Awesome 5 Free Brands 400", "Font Awesome 5 Free Solid 900";
-          @extend %fa-icon;
-          @extend .fas;
-          &:before {
-            content: fa-content($fa-var-user);
-            margin-right: .5rem;
-          }
-        }
-        .user3 {
-          font-family: "Font Awesome 5 Free Regular 400", "Font Awesome 5 Free Brands 400", "Font Awesome 5 Free Solid 900";
-          @extend %fa-icon;
-          @extend .fab;
-          &:before {
-            content: fa-content($fa-var-twitter);
-            margin-right: .5rem;
-          }
-        }
+
         .top-tile-sub {
           margin-top: 20px;
           width: 100%;
@@ -130,46 +102,16 @@ body{
               display: flex;
               justify-content: flex-end;
               align-items: center;
-              .top-sns-twitter {
-                background-image: url(../img/icon-twitter.png);
-                background-repeat: no-repeat;
-                background-size: contain;
-                width: 30px;
-                height: 30px;
+              .top-sns-icon {
+                font-size: 1.2em;
+                color: #d9534f;
                 margin-right: 10px;
-              }
-              .top-sns-twitter:hover {
-                cursor: pointer;
-                animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
-                animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
-                animation-iteration-count: infinite;
-              }
-              .top-sns-github {
-                background-image: url(../img/icon-github.png);
-                background-repeat: no-repeat;
-                background-size: contain;
-                width: 30px;
-                height: 30px;
-                margin-right: 10px;
-              }
-              .top-sns-github:hover {
-                cursor: pointer;
-                animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
-                animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
-                animation-iteration-count: infinite;
-              }
-              .top-sns-codepen {
-                background-image: url(../img/icon-codepen.png);
-                background-repeat: no-repeat;
-                background-size: contain;
-                width: 40px;
-                height: 40px;
-              }
-              .top-sns-codepen:hover {
-                cursor: pointer;
-                animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
-                animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
-                animation-iteration-count: infinite;
+                &:hover {
+                  cursor: pointer;
+                  animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
+                  animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
+                  animation-iteration-count: infinite;
+                }
               }
             }
           }
