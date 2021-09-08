@@ -5,7 +5,6 @@ import '../css/style.scss';
 import '../img/balloon.png'
 import '../img/cloud.png'
 import '../img/balloon-top.png'
-import '../img/cloud-top.png'
 import '../img/wind.png'
 
 import '@fortawesome/fontawesome-free/js/fontawesome';
