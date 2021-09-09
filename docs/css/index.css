@@ -63,14 +63,6 @@ body .container .first-content .self‐introduction-top .top-sns-container {
   opacity: 0;
   animation-fill-mode: forwards;
 }
-body .container .first-content .self‐introduction-top .top-sns-container .top-sns-comments {
-  display: flex;
-  justify-content: flex-end;
-}
-body .container .first-content .self‐introduction-top .top-sns-container .top-sns-comments .top-sns-comment {
-  font-size: 1rem;
-  width: 280px;
-}
 body .container .first-content .self‐introduction-top .top-sns-container .top-sns-layouts {
   margin-top: 10px;
   display: flex;
