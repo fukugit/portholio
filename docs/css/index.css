@@ -114,6 +114,10 @@ body .container .first-content .self‐introduction-detail .top-scrollme .top-ba
   width: 700px;
   height: 700px;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   animation: pulse;
   /* That fadeInLeft of @keyframe is declared in animate.css. */
   animation-duration: 1s;
@@ -122,9 +126,8 @@ body .container .first-content .self‐introduction-detail .top-scrollme .top-ba
 }
 body .container .first-content .self‐introduction-detail .top-scrollme .top-balloon .top-balloon-comment {
   position: absolute;
-  width: 350px;
-  top: 220px;
-  left: 180px;
+  width: 400px;
+  top: 250px;
 }
 body .container .first-content .self‐introduction-detail .top-scrollme .top-balloon .top-balloon-comment strong {
   font-size: 1.4rem;
