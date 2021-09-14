@@ -302,6 +302,20 @@ body .container .second-content .inner-content section #box-backend #balloon-bac
   width: 60%;
   overflow-wrap: break-word;
 }
+body .container .second-content .inner-content section #box-backend #balloon-backend .balloon-comment-detail-table {
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 50%;
+  line-height: 28px;
+  overflow-wrap: break-word;
+}
+body .container .second-content .inner-content section #box-backend #balloon-backend .balloon-comment-detail-table .sub-comment {
+  margin-left: 23px;
+}
+body .container .second-content .inner-content section #box-backend #balloon-backend .balloon-comment-detail-table .icon-style {
+  color: #EB5591;
+  padding-right: 5px;
+}
 body .container .second-content .inner-content section #box-enjoy {
   position: absolute;
   top: 0;
