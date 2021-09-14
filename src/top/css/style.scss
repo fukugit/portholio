@@ -251,6 +251,7 @@ body{
                 width: 60%;
                 overflow-wrap: break-word;
               }
+
             }
           }
           #box-css {
@@ -298,6 +299,20 @@ body{
                 margin-top: 20px;
                 width: 60%;
                 overflow-wrap: break-word;
+              }
+              .balloon-comment-detail-table {
+                margin-top: 20px;
+                margin-left: 50px;
+                width: 50%;
+                line-height: 28px;
+                overflow-wrap: break-word;
+                .sub-comment {
+                  margin-left: 23px;
+                }
+                .icon-style {
+                  color: $color-strong;
+                  padding-right: 5px;
+                }
               }
             }
           }
