@@ -267,6 +267,7 @@ var css = document.getElementById('box-css');
 var backend = document.getElementById('box-backend');
 var enjoy = document.getElementById('box-enjoy');
 var acknowledgement = document.getElementById('box-acknowledgement');
+var acknowledgement2 = document.getElementById('box-acknowledgement2');
 window.addEventListener('scroll', function () {
   scrollRotate('wind1', 2);
   scrollRotate('wind2', 1);
@@ -278,6 +279,7 @@ window.addEventListener('scroll', function () {
   backend.style.left = (value - 2000 * 3) * 0.3 + 'px';
   enjoy.style.left = (value - 1900 * 4) * 0.3 + 'px';
   acknowledgement.style.left = (value - 1850 * 5) * 0.3 + 'px';
+  acknowledgement2.style.left = (value - 1800 * 6) * 0.3 + 'px';
 });
 
 function scrollRotate(id, rotateValue) {
