@@ -24,6 +24,7 @@ const enjoy = document.getElementById('box-enjoy');
 const acknowledgement = document.getElementById('box-acknowledgement');
 const acknowledgement2 = document.getElementById('box-acknowledgement2');
 const acknowledgement3 = document.getElementById('box-acknowledgement3');
+const acknowledgement4 = document.getElementById('box-acknowledgement4');
 window.addEventListener('scroll', function () {
   scrollRotate('wind1', 2);
   scrollRotate('wind2', 1);
@@ -37,6 +38,7 @@ window.addEventListener('scroll', function () {
   acknowledgement.style.left = (value - 1850 * 5) * 0.3 + 'px';
   acknowledgement2.style.left = (value - 1800 * 6) * 0.3 + 'px';
   acknowledgement3.style.left = (value - 1750 * 7) * 0.3 + 'px';
+  acknowledgement4.style.left = (value - 1750 * 8) * 0.3 + 'px';
 });
 
 function scrollRotate(id, rotateValue) {
