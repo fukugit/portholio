@@ -316,6 +316,30 @@ body .container .second-content .inner-content section #box-backend #balloon-bac
   color: #EB5591;
   padding-right: 5px;
 }
+body .container .second-content .inner-content section #box-sns {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .container .second-content .inner-content section #box-sns #balloon-sns {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .container .second-content .inner-content section #box-sns #balloon-sns .balloon-comment-title {
+  font-size: 3rem;
+  color: #EB5591;
+  font-family: "Caveat", cursive, sans-serif;
+}
+body .container .second-content .inner-content section #box-sns #balloon-sns .balloon-comment-detail {
+  margin-top: 20px;
+  width: 60%;
+  overflow-wrap: break-word;
+}
 body .container .second-content .inner-content section #box-enjoy {
   position: absolute;
   top: 0;
@@ -403,10 +427,116 @@ body .container .second-content .inner-content section #box-acknowledgement2 #ba
   color: #EB5591;
   font-family: "Caveat", cursive, sans-serif;
 }
+body .container .second-content .inner-content section #box-acknowledgement2 #balloon-acknowledgement2 .balloon-comment-more {
+  margin-top: 50px;
+  font-size: 1.2rem;
+  color: #EB5591;
+  font-family: "Caveat", cursive, sans-serif;
+}
 body .container .second-content .inner-content section #box-acknowledgement2 #balloon-acknowledgement2 .balloon-comment-detail {
   margin-top: 20px;
   width: 60%;
   overflow-wrap: break-word;
+}
+body .container .second-content .inner-content section #box-acknowledgement2 #balloon-acknowledgement2 .balloon-comment-detail-table-title {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+body .container .second-content .inner-content section #box-acknowledgement2 #balloon-acknowledgement2 .balloon-comment-detail-table {
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 50%;
+  line-height: 28px;
+  overflow-wrap: break-word;
+}
+body .container .second-content .inner-content section #box-acknowledgement2 #balloon-acknowledgement2 .icon-style {
+  color: #EB5591;
+  padding-right: 5px;
+}
+body .container .second-content .inner-content #box-acknowledgement3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .container .second-content .inner-content #box-acknowledgement3 #balloon-acknowledgement3 {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .container .second-content .inner-content #box-acknowledgement3 #balloon-acknowledgement3 .balloon-comment-title {
+  font-size: 3rem;
+  color: #EB5591;
+  font-family: "Caveat", cursive, sans-serif;
+}
+body .container .second-content .inner-content #box-acknowledgement3 #balloon-acknowledgement3 .balloon-comment-more {
+  margin-top: 50px;
+  font-size: 1.2rem;
+  color: #EB5591;
+  font-family: "Caveat", cursive, sans-serif;
+}
+body .container .second-content .inner-content #box-acknowledgement3 #balloon-acknowledgement3 .balloon-comment-detail {
+  margin-top: 20px;
+  width: 60%;
+  overflow-wrap: break-word;
+}
+body .container .second-content .inner-content #box-acknowledgement3 #balloon-acknowledgement3 .balloon-comment-detail-table-title {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+body .container .second-content .inner-content #box-acknowledgement3 #balloon-acknowledgement3 .balloon-comment-detail-table {
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 50%;
+  line-height: 28px;
+  overflow-wrap: break-word;
+}
+body .container .second-content .inner-content #box-acknowledgement3 #balloon-acknowledgement3 .icon-style {
+  color: #EB5591;
+  padding-right: 5px;
+}
+body .container .second-content #box-acknowledgement4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .container .second-content #box-acknowledgement4 #balloon-acknowledgement4 {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .container .second-content #box-acknowledgement4 #balloon-acknowledgement4 .balloon-comment-more {
+  margin-top: 50px;
+  font-size: 1.2rem;
+  color: #EB5591;
+  font-family: "Caveat", cursive, sans-serif;
+}
+body .container .second-content #box-acknowledgement4 #balloon-acknowledgement4 .balloon-comment-detail {
+  margin-top: 20px;
+  width: 60%;
+  overflow-wrap: break-word;
+}
+body .container .second-content #box-acknowledgement4 #balloon-acknowledgement4 .balloon-comment-detail-table-title {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+body .container .second-content #box-acknowledgement4 #balloon-acknowledgement4 .balloon-comment-detail-table {
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 60%;
+  line-height: 28px;
+  overflow-wrap: break-word;
+}
+body .container .second-content #box-acknowledgement4 #balloon-acknowledgement4 .icon-style {
+  color: #EB5591;
+  padding-right: 5px;
 }
 
 /*# sourceMappingURL=index.css.map*/
