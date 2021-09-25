@@ -65,6 +65,7 @@ body .container .first-content .self‐introduction-top .top-sns-container {
 }
 body .container .first-content .self‐introduction-top .top-sns-container .top-sns-layouts {
   margin-top: 10px;
+  margin-right: 80px;
   display: flex;
   justify-content: flex-end;
 }
@@ -86,6 +87,9 @@ body .container .first-content .self‐introduction-top .top-sns-container .top-
   animation-duration: 1s;
   /* don't forget to set a duration for above animation. */
   animation-iteration-count: infinite;
+}
+body .container .first-content .self‐introduction-top .top-sns-container .top-sns-layouts .top-sns-layout .top-sns-icon a {
+  color: inherit;
 }
 body .container .first-content .self‐introduction-detail {
   width: 100%;

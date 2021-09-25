@@ -68,6 +68,7 @@ body{
           animation-fill-mode: forwards;
           .top-sns-layouts {
             margin-top: 10px;
+            margin-right: 80px;
             display: flex;
             justify-content: flex-end;
             .top-sns-layout {
@@ -84,6 +85,9 @@ body{
                   animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
                   animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
                   animation-iteration-count: infinite;
+                }
+                a {
+                  color: inherit;
                 }
               }
             }
