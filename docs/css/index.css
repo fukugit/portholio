@@ -13,6 +13,10 @@ body {
   display: flex;
   justify-content: center;
 }
+body a {
+  color: #EB5591;
+  text-decoration: none;
+}
 body .container {
   width: 1024px;
   display: flex;
@@ -32,7 +36,7 @@ body .container .first-content .self‐introduction-top {
 body .container .first-content .self‐introduction-top .top-tile {
   width: 100%;
   font-size: 2.8rem;
-  font-family: "Tourney", cursive;
+  font-family: "Roboto Slab", serif;
   animation: fadeInLeft;
   /* That fadeInLeft of @keyframe is declared in animate.css. */
   animation-duration: 0.3s;
@@ -40,6 +44,8 @@ body .container .first-content .self‐introduction-top .top-tile {
 }
 body .container .first-content .self‐introduction-top .top-tile-sub {
   margin-top: 20px;
+  margin-left: 10px;
+  font-family: "Mukta", sans-serif;
   width: 100%;
   font-size: 1.2rem;
   animation: fadeInRight;
@@ -93,6 +99,7 @@ body .container .first-content .self‐introduction-top .top-sns-container .top-
 }
 body .container .first-content .self‐introduction-detail {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   padding-top: 50px;
@@ -122,20 +129,33 @@ body .container .first-content .self‐introduction-detail .top-scrollme .top-ba
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: pulse;
-  /* That fadeInLeft of @keyframe is declared in animate.css. */
-  animation-duration: 1s;
-  /* don't forget to set a duration for above animation. */
-  animation-iteration-count: infinite;
+  animation: self_introduction_detail_animation 3s linear infinite;
+  transform-origin: 50% 50%;
+  margin: 1rem 0 !important;
 }
 body .container .first-content .self‐introduction-detail .top-scrollme .top-balloon .top-balloon-comment {
   position: absolute;
   width: 400px;
   top: 250px;
+  line-height: 1.7em;
 }
 body .container .first-content .self‐introduction-detail .top-scrollme .top-balloon .top-balloon-comment strong {
   font-size: 1.4rem;
   color: #EB5591;
+}
+@keyframes self_introduction_detail_animation {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 body .container .second-content {
   width: 100%;
@@ -255,6 +275,7 @@ body .container .second-content .inner-content section #box-hugo #balloon-hugo .
 }
 body .container .second-content .inner-content section #box-hugo #balloon-hugo .balloon-comment-detail {
   margin-top: 20px;
+  line-height: 1.6em;
   width: 60%;
   overflow-wrap: break-word;
 }
@@ -279,6 +300,7 @@ body .container .second-content .inner-content section #box-css #balloon-css .ba
 }
 body .container .second-content .inner-content section #box-css #balloon-css .balloon-comment-detail {
   margin-top: 20px;
+  line-height: 1.7em;
   width: 60%;
   overflow-wrap: break-word;
 }
@@ -303,6 +325,7 @@ body .container .second-content .inner-content section #box-backend #balloon-bac
 }
 body .container .second-content .inner-content section #box-backend #balloon-backend .balloon-comment-detail {
   margin-top: 20px;
+  line-height: 1.7em;
   width: 60%;
   overflow-wrap: break-word;
 }
@@ -341,6 +364,7 @@ body .container .second-content .inner-content section #box-sns #balloon-sns .ba
 }
 body .container .second-content .inner-content section #box-sns #balloon-sns .balloon-comment-detail {
   margin-top: 20px;
+  line-height: 1.7em;
   width: 60%;
   overflow-wrap: break-word;
 }
@@ -365,6 +389,7 @@ body .container .second-content .inner-content section #box-enjoy #balloon-enjoy
 }
 body .container .second-content .inner-content section #box-enjoy #balloon-enjoy .balloon-comment-detail {
   margin-top: 20px;
+  line-height: 1.7em;
   width: 60%;
   overflow-wrap: break-word;
 }
@@ -394,6 +419,7 @@ body .container .second-content .inner-content section #box-acknowledgement #bal
 }
 body .container .second-content .inner-content section #box-acknowledgement #balloon-acknowledgement .balloon-comment-detail {
   margin-top: 20px;
+  line-height: 1.4em;
   width: 60%;
   overflow-wrap: break-word;
 }
