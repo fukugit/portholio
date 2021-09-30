@@ -1,4 +1,5 @@
 import '../css/style.scss';
+const party = require("party-js");
 
 // In case of using url() in sass file, this import steatment is necessary.  
 // But I have no idea why it is neccesry to use image file in sass.  
@@ -43,7 +44,19 @@ window.addEventListener('scroll', function () {
   acknowledgement4.style.left = (value - 1750 * 9) * 0.3 + 'px';
 });
 
+document.getElementById("twitter-icon").addEventListener("mouseover", function (e) {
+  party.confetti(this, {
+    count: party.variation.range(10, 20),
+    shapes: ["star"],
+    speed: party.variation.range(10, 500),
+    size: party.variation.skew(1, 0.7),
+    // rotation: party.random.randomUnitVector().scale(360),
+    color: party.Color.fromHsl(party.random.randomRange(180, 300), 100, 80),
+  });
+});
+
 function scrollRotate(id, rotateValue) {
   let image = document.getElementById(id);
   image.style.transform = "rotate(" + window.pageYOffset/rotateValue + "deg)";
 }
+
