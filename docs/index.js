@@ -246,8 +246,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_fontawesome_free_webfonts_fa_regular_400_ttf__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf */ "./node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf");
 /* harmony import */ var _fortawesome_fontawesome_free_webfonts_fa_brands_400_ttf__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf */ "./node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf");
 /* harmony import */ var _fortawesome_fontawesome_free_webfonts_fa_solid_900_ttf__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf */ "./node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf");
- // In case of using url() in sass file, this import steatment is necessary.  
+
+
+var party = __webpack_require__(/*! party-js */ "./node_modules/party-js/lib/index.js"); // In case of using url() in sass file, this import steatment is necessary.  
 // But I have no idea why it is neccesry to use image file in sass.  
+
 
 
 
@@ -286,6 +289,16 @@ window.addEventListener('scroll', function () {
   acknowledgement2.style.left = (value - 1750 * 7) * 0.3 + 'px';
   acknowledgement3.style.left = (value - 1750 * 8) * 0.3 + 'px';
   acknowledgement4.style.left = (value - 1750 * 9) * 0.3 + 'px';
+});
+document.getElementById("twitter-icon").addEventListener("mouseover", function (e) {
+  party.confetti(this, {
+    count: party.variation.range(10, 20),
+    shapes: ["star"],
+    speed: party.variation.range(10, 500),
+    size: party.variation.skew(1, 0.7),
+    // rotation: party.random.randomUnitVector().scale(360),
+    color: party.Color.fromHsl(party.random.randomRange(180, 300), 100, 80)
+  });
 });
 
 function scrollRotate(id, rotateValue) {
