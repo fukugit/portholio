@@ -295,9 +295,24 @@ document.getElementById("twitter-icon").addEventListener("mouseover", function (
     count: party.variation.range(10, 20),
     shapes: ["star"],
     speed: party.variation.range(10, 500),
-    size: party.variation.skew(1, 0.7),
+    size: party.variation.skew(1, 0.9),
     // rotation: party.random.randomUnitVector().scale(360),
-    color: party.Color.fromHsl(party.random.randomRange(180, 300), 100, 80)
+    // color: party.Color.fromHsl(party.random.randomRange(180, 300), 100, 80),
+    // The color should change to HSL from color code using the below site.
+    // https://www.peko-step.com/tool/hslrgb.html
+    color: party.Color.fromHsl(340, 80, 62)
+  });
+});
+document.getElementById("github-icon").addEventListener("mouseover", function (e) {
+  party.confetti(this, {
+    count: party.variation.range(10, 20),
+    shapes: ["circle"],
+    speed: party.variation.range(10, 500),
+    size: party.variation.skew(1, 0.9),
+    // rotation: party.random.randomUnitVector().scale(360),
+    // The color should change to HSL from color code using the below site.
+    // https://www.peko-step.com/tool/hslrgb.html
+    color: party.Color.fromHsl(220, 60, 50)
   });
 });
 
