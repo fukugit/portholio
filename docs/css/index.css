@@ -121,7 +121,7 @@ body .container .first-content .self‐introduction-detail .top-scrollme .top-ba
   top: 0;
   background-image: url(../img/balloon-top.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 700px 400px;
   width: 700px;
   height: 700px;
   z-index: 1;
@@ -136,7 +136,7 @@ body .container .first-content .self‐introduction-detail .top-scrollme .top-ba
 body .container .first-content .self‐introduction-detail .top-scrollme .top-balloon .top-balloon-comment {
   position: absolute;
   width: 400px;
-  top: 250px;
+  top: 130px;
   line-height: 1.7em;
 }
 body .container .first-content .self‐introduction-detail .top-scrollme .top-balloon .top-balloon-comment strong {
