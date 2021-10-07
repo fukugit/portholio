@@ -26,14 +26,18 @@ body .container .first-content {
   width: 100%;
   height: 100vh;
   background-color: #f6f6e9;
-  padding-top: 100px;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
-body .container .first-content .self‐introduction-top {
+body .container .first-content .main-content {
+  height: 70%;
+}
+body .container .first-content .main-content .self‐introduction-top {
   width: 100%;
 }
-body .container .first-content .self‐introduction-top .top-tile {
+body .container .first-content .main-content .self‐introduction-top .top-tile {
   width: 100%;
   font-size: 2.8rem;
   font-family: "Roboto Slab", serif;
@@ -42,7 +46,7 @@ body .container .first-content .self‐introduction-top .top-tile {
   animation-duration: 0.3s;
   /* don't forget to set a duration for above animation. */
 }
-body .container .first-content .self‐introduction-top .top-tile-sub {
+body .container .first-content .main-content .self‐introduction-top .top-tile-sub {
   margin-top: 20px;
   margin-left: 10px;
   font-family: "Mukta", sans-serif;
@@ -56,7 +60,7 @@ body .container .first-content .self‐introduction-top .top-tile-sub {
   opacity: 0;
   animation-fill-mode: forwards;
 }
-body .container .first-content .self‐introduction-top .top-sns-container {
+body .container .first-content .main-content .self‐introduction-top .top-sns-container {
   margin-top: 30px;
   width: 100%;
   display: flex;
@@ -69,24 +73,24 @@ body .container .first-content .self‐introduction-top .top-sns-container {
   opacity: 0;
   animation-fill-mode: forwards;
 }
-body .container .first-content .self‐introduction-top .top-sns-container .top-sns-layouts {
+body .container .first-content .main-content .self‐introduction-top .top-sns-container .top-sns-layouts {
   margin-top: 10px;
   margin-right: 80px;
   display: flex;
   justify-content: flex-end;
 }
-body .container .first-content .self‐introduction-top .top-sns-container .top-sns-layouts .top-sns-layout {
+body .container .first-content .main-content .self‐introduction-top .top-sns-container .top-sns-layouts .top-sns-layout {
   width: 400px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-body .container .first-content .self‐introduction-top .top-sns-container .top-sns-layouts .top-sns-layout .top-sns-icon {
+body .container .first-content .main-content .self‐introduction-top .top-sns-container .top-sns-layouts .top-sns-layout .top-sns-icon {
   font-size: 1.2em;
   color: #d9534f;
   margin-right: 20px;
 }
-body .container .first-content .self‐introduction-top .top-sns-container .top-sns-layouts .top-sns-layout .top-sns-icon:hover {
+body .container .first-content .main-content .self‐introduction-top .top-sns-container .top-sns-layouts .top-sns-layout .top-sns-icon:hover {
   cursor: pointer;
   animation: heartBeat;
   /* That fadeInLeft of @keyframe is declared in animate.css. */
@@ -94,15 +98,15 @@ body .container .first-content .self‐introduction-top .top-sns-container .top-
   /* don't forget to set a duration for above animation. */
   animation-iteration-count: infinite;
 }
-body .container .first-content .self‐introduction-top .top-sns-container .top-sns-layouts .top-sns-layout .top-sns-icon a {
+body .container .first-content .main-content .self‐introduction-top .top-sns-container .top-sns-layouts .top-sns-layout .top-sns-icon a {
   color: inherit;
 }
-body .container .first-content .self‐introduction-detail {
+body .container .first-content .main-content .self‐introduction-detail {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  margin-top: 10px;
   animation: fadeInUp;
   /* That fadeInLeft of @keyframe is declared in animate.css. */
   animation-duration: 0.3s;
@@ -111,17 +115,17 @@ body .container .first-content .self‐introduction-detail {
   opacity: 0;
   animation-fill-mode: forwards;
 }
-body .container .first-content .self‐introduction-detail .top-scrollme {
+body .container .first-content .main-content .self‐introduction-detail .top-scrollme {
   position: relative;
   font-size: 1rem;
   width: 800px;
 }
-body .container .first-content .self‐introduction-detail .top-scrollme .top-balloon {
+body .container .first-content .main-content .self‐introduction-detail .top-scrollme .top-balloon {
   position: absolute;
   top: 0;
   background-image: url(../img/balloon-top.png);
   background-repeat: no-repeat;
-  background-size: 700px 400px;
+  background-size: 700px 500px;
   width: 700px;
   height: 700px;
   z-index: 1;
@@ -133,13 +137,13 @@ body .container .first-content .self‐introduction-detail .top-scrollme .top-ba
   transform-origin: 50% 50%;
   margin: 1rem 0 !important;
 }
-body .container .first-content .self‐introduction-detail .top-scrollme .top-balloon .top-balloon-comment {
+body .container .first-content .main-content .self‐introduction-detail .top-scrollme .top-balloon .top-balloon-comment {
   position: absolute;
   width: 400px;
-  top: 130px;
+  top: 170px;
   line-height: 1.7em;
 }
-body .container .first-content .self‐introduction-detail .top-scrollme .top-balloon .top-balloon-comment strong {
+body .container .first-content .main-content .self‐introduction-detail .top-scrollme .top-balloon .top-balloon-comment strong {
   font-size: 1.4rem;
   color: #EB5591;
 }
