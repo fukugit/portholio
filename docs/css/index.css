@@ -106,7 +106,7 @@ body .container .first-content .main-content .self‐introduction-detail {
   height: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 30px;
   animation: fadeInUp;
   /* That fadeInLeft of @keyframe is declared in animate.css. */
   animation-duration: 0.3s;
@@ -123,9 +123,10 @@ body .container .first-content .main-content .self‐introduction-detail .top-sc
 body .container .first-content .main-content .self‐introduction-detail .top-scrollme .top-balloon {
   position: absolute;
   top: 0;
+  left: 50px;
   background-image: url(../img/balloon-top.png);
   background-repeat: no-repeat;
-  background-size: 700px 500px;
+  background-size: 700px 400px;
   width: 700px;
   height: 700px;
   z-index: 1;
@@ -140,7 +141,7 @@ body .container .first-content .main-content .self‐introduction-detail .top-sc
 body .container .first-content .main-content .self‐introduction-detail .top-scrollme .top-balloon .top-balloon-comment {
   position: absolute;
   width: 400px;
-  top: 170px;
+  top: 130px;
   line-height: 1.7em;
 }
 body .container .first-content .main-content .self‐introduction-detail .top-scrollme .top-balloon .top-balloon-comment strong {
