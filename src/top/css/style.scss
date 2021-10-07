@@ -37,114 +37,116 @@ body{
       width: 100%;
       height: 100vh;
       background-color: #f6f6e9;
-      padding-top: 100px;
       display: flex;
-      flex-direction: column;
-      .self‐introduction-top {
-        width: 100%;
-        .top-tile {
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      .main-content {
+        height: 70%;
+        .self‐introduction-top {
           width: 100%;
-          font-size: 2.8rem;
-          font-family: 'Roboto Slab', serif;
-          animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
-          animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
-        }
-
-        .top-tile-sub {
-          margin-top: 20px;
-          margin-left: 10px;
-          font-family: 'Mukta', sans-serif;
-          width: 100%;
-          font-size: 1.2rem;
-          animation: fadeInRight; /* That fadeInLeft of @keyframe is declared in animate.css. */
-          animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
-          animation-delay: 0.3s;
-          opacity: 0;
-          animation-fill-mode: forwards;
-        }
-        .top-sns-container {
-          margin-top: 30px;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
-          animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
-          animation-delay: 0.4s;
-          opacity: 0;
-          animation-fill-mode: forwards;
-          .top-sns-layouts {
-            margin-top: 10px;
-            margin-right: 80px;
-            display: flex;
-            justify-content: flex-end;
-            .top-sns-layout {
-              width: 400px;
-              display: flex;
-              justify-content: flex-end;
-              align-items: center;
-              .top-sns-icon {
-                font-size: 1.2em;
-                color: #d9534f;
-                margin-right: 20px;
-                &:hover {
-                  cursor: pointer;
-                  animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
-                  animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
-                  animation-iteration-count: infinite;
-                }
-                a {
-                  color: inherit;
-                }
-              }
-            }
+         .top-tile {
+           width: 100%;
+           font-size: 2.8rem;
+           font-family: 'Roboto Slab', serif;
+           animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
+           animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
           }
-        }
-      }
-      .self‐introduction-detail {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        padding-top: 50px;
-        animation: fadeInUp; /* That fadeInLeft of @keyframe is declared in animate.css. */
-        animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
-        animation-delay: 0.5s;
-        opacity: 0;
-        animation-fill-mode: forwards;
-        .top-scrollme {
-          position: relative;
-          font-size: 1rem;
-          width: 800px;
-          .top-balloon {
-            position: absolute;
-            top: 0;
-            background-image: url(../img/balloon-top.png);
-            background-repeat: no-repeat;
-            background-size: 700px 400px;
-            width: 700px;
-            height: 700px;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            animation: self_introduction_detail_animation 3s linear infinite;
-            transform-origin: 50% 50%;
-            margin: 1rem 0 !important;
-            .top-balloon-comment {
-              position: absolute;
-              width: 400px;
-              top: 130px;
-              line-height: 1.7em;
-              strong {
-                font-size: 1.4rem;
-                color: $color-strong;
-              }
-            }
+          .top-tile-sub {
+            margin-top: 20px;
+            margin-left: 10px;
+            font-family: 'Mukta', sans-serif;
+            width: 100%;
+            font-size: 1.2rem;
+            animation: fadeInRight; /* That fadeInLeft of @keyframe is declared in animate.css. */
+            animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
+            animation-delay: 0.3s;
+            opacity: 0;
+            animation-fill-mode: forwards;
           }
-        }
-      }
-      @keyframes self_introduction_detail_animation {
+          .top-sns-container {
+           margin-top: 30px;
+           width: 100%;
+           display: flex;
+           flex-direction: column;
+           animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
+           animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
+           animation-delay: 0.4s;
+           opacity: 0;
+           animation-fill-mode: forwards;
+           .top-sns-layouts {
+             margin-top: 10px;
+             margin-right: 80px;
+             display: flex;
+             justify-content: flex-end;
+             .top-sns-layout {
+               width: 400px;
+               display: flex;
+               justify-content: flex-end;
+               align-items: center;
+               .top-sns-icon {
+                 font-size: 1.2em;
+                 color: #d9534f;
+                 margin-right: 20px;
+                 &:hover {
+                   cursor: pointer;
+                   animation: heartBeat; /* That fadeInLeft of @keyframe is declared in animate.css. */
+                   animation-duration: 1.0s; /* don't forget to set a duration for above animation. */
+                   animation-iteration-count: infinite;
+                 }
+                 a {
+                   color: inherit;
+                 }
+               }
+             }
+           }
+         }
+       }
+       .self‐introduction-detail {
+         width: 100%;
+         height: 100%;
+         display: flex;
+         justify-content: center;
+         margin-top: 10px;
+         animation: fadeInUp; /* That fadeInLeft of @keyframe is declared in animate.css. */
+         animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
+         animation-delay: 0.5s;
+         opacity: 0;
+         animation-fill-mode: forwards;
+         .top-scrollme {
+           position: relative;
+           font-size: 1rem;
+           width: 800px;
+           .top-balloon {
+             position: absolute;
+             top: 0;
+             background-image: url(../img/balloon-top.png);
+             background-repeat: no-repeat;
+             background-size: 700px 500px;
+             width: 700px;
+             height: 700px;
+             z-index: 1;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             animation: self_introduction_detail_animation 3s linear infinite;
+             transform-origin: 50% 50%;
+             margin: 1rem 0 !important;
+             .top-balloon-comment {
+               position: absolute;
+               width: 400px;
+               top: 170px;
+               line-height: 1.7em;
+               strong {
+                 font-size: 1.4rem;
+                 color: $color-strong;
+               }
+             }
+           }
+         }
+       }
+       @keyframes self_introduction_detail_animation {
         0% { transform: translateY(0) }
         30% {
           transform: translateY(-10px);
@@ -156,6 +158,7 @@ body{
           transform: translateY(0);
         }
       }
+     }
     }
     .second-content {
       width: 100%;
