@@ -72,6 +72,70 @@ document.getElementById("github-icon").addEventListener("mouseover", function (e
   });
 });
 
+document.getElementById("codepen-icon").addEventListener("mouseover", function (e) {
+  party.confetti(this, {
+    count: party.variation.range(10, 20),
+    shapes: ["square"],
+    speed: party.variation.range(10, 500),
+    size: party.variation.skew(1, 0.9),
+    // rotation: party.random.randomUnitVector().scale(360),
+    // The color should change to HSL from color code using the below site.
+    // https://www.peko-step.com/tool/hslrgb.html
+    color: party.Color.fromHsl(27, 88, 50),
+  });
+});
+
+document.getElementById("devto-icon").addEventListener("mouseover", function (e) {
+  party.confetti(this, {
+    count: party.variation.range(10, 20),
+    shapes: ["circle"],
+    speed: party.variation.range(10, 500),
+    size: party.variation.skew(1, 0.9),
+    // rotation: party.random.randomUnitVector().scale(360),
+    // The color should change to HSL from color code using the below site.
+    // https://www.peko-step.com/tool/hslrgb.html
+    color: party.Color.fromHsl(220, 60, 50),
+  });
+});
+
+document.getElementById("stackoverflow-icon").addEventListener("mouseover", function (e) {
+  party.confetti(this, {
+    count: party.variation.range(10, 20),
+    shapes: ["circle"],
+    speed: party.variation.range(10, 500),
+    size: party.variation.skew(1, 0.9),
+    // rotation: party.random.randomUnitVector().scale(360),
+    // The color should change to HSL from color code using the below site.
+    // https://www.peko-step.com/tool/hslrgb.html
+    color: party.Color.fromHsl(220, 60, 50),
+  });
+});
+
+document.getElementById("blog-icon").addEventListener("mouseover", function (e) {
+  party.confetti(this, {
+    count: party.variation.range(10, 20),
+    shapes: ["circle"],
+    speed: party.variation.range(10, 500),
+    size: party.variation.skew(1, 0.9),
+    // rotation: party.random.randomUnitVector().scale(360),
+    // The color should change to HSL from color code using the below site.
+    // https://www.peko-step.com/tool/hslrgb.html
+    color: party.Color.fromHsl(220, 60, 50),
+  });
+});
+
+document.getElementById("npm-icon").addEventListener("mouseover", function (e) {
+  party.confetti(this, {
+    count: party.variation.range(10, 20),
+    shapes: ["circle"],
+    speed: party.variation.range(10, 500),
+    size: party.variation.skew(1, 0.9),
+    // rotation: party.random.randomUnitVector().scale(360),
+    // The color should change to HSL from color code using the below site.
+    // https://www.peko-step.com/tool/hslrgb.html
+    color: party.Color.fromHsl(220, 60, 50),
+  });
+});
 
 function scrollRotate(id, rotateValue) {
   let image = document.getElementById(id);

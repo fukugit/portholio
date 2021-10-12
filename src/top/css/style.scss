@@ -52,31 +52,19 @@ body{
            animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
            animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
           }
-          .top-tile-sub {
-            margin-top: 20px;
-            margin-left: 10px;
-            font-family: 'Mukta', sans-serif;
-            width: 100%;
-            font-size: 1.2rem;
-            animation: fadeInRight; /* That fadeInLeft of @keyframe is declared in animate.css. */
-            animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
-            animation-delay: 0.3s;
-            opacity: 0;
-            animation-fill-mode: forwards;
-          }
           .top-sns-container {
-           margin-top: 30px;
+           margin-top: 10px;
            width: 100%;
            display: flex;
            flex-direction: column;
            animation: fadeInLeft; /* That fadeInLeft of @keyframe is declared in animate.css. */
            animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
-           animation-delay: 0.4s;
+           animation-delay: 0.3s;
            opacity: 0;
            animation-fill-mode: forwards;
            .top-sns-layouts {
              margin-top: 10px;
-             margin-right: 80px;
+             margin-right: 10px;
              display: flex;
              justify-content: flex-end;
              .top-sns-layout {
@@ -110,7 +98,7 @@ body{
          margin-top: 30px;
          animation: fadeInUp; /* That fadeInLeft of @keyframe is declared in animate.css. */
          animation-duration: 0.3s; /* don't forget to set a duration for above animation. */
-         animation-delay: 0.5s;
+         animation-delay: 0.4s;
          opacity: 0;
          animation-fill-mode: forwards;
          .top-scrollme {
@@ -123,7 +111,7 @@ body{
              left: 50px;
              background-image: url(../img/balloon-top.png);
              background-repeat: no-repeat;
-             background-size: 700px 400px;
+             background-size: 700px 500px;
              width: 700px;
              height: 700px;
              z-index: 1;
@@ -137,7 +125,7 @@ body{
              .top-balloon-comment {
                position: absolute;
                width: 400px;
-               top: 130px;
+               top: 165px;
                line-height: 1.7em;
                strong {
                  font-size: 1.4rem;
