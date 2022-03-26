@@ -42,7 +42,7 @@ body{
       align-content: center;
       justify-content: center;
       .main-content {
-        height: 70%;
+        height: 50%;
         .self‐introduction-top {
           width: 100%;
          .top-tile {
@@ -105,15 +105,16 @@ body{
            position: relative;
            font-size: 1rem;
            width: 800px;
+           height: 400px;
            .top-balloon {
              position: absolute;
              top: 0;
              left: 50px;
              background-image: url(../img/balloon-top.png);
              background-repeat: no-repeat;
-             background-size: 700px 500px;
+             background-size: 700px 400px;
              width: 700px;
-             height: 700px;
+             height: 400px;
              z-index: 1;
              display: flex;
              flex-direction: column;
@@ -125,7 +126,7 @@ body{
              .top-balloon-comment {
                position: absolute;
                width: 400px;
-               top: 165px;
+               top: 105px;
                line-height: 1.7em;
                strong {
                  font-size: 1.4rem;
