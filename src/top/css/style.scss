@@ -109,11 +109,11 @@ body{
            .top-balloon {
              position: absolute;
              top: 0;
-             left: 50px;
+             left: 100px;
              background-image: url(../img/balloon-top.png);
              background-repeat: no-repeat;
-             background-size: 100% 70%;
-             width: 700px;
+             background-size: 620px 300px;
+             width: 620px;
              height: 100%;
              z-index: 1;
              display: flex;
@@ -127,6 +127,7 @@ body{
                position: absolute;
                width: 400px;
                top: 80px;
+               right: 100px;
                line-height: 1.7em;
                strong {
                  font-size: 1.4rem;
